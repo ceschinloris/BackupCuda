@@ -58,12 +58,12 @@ int mainAnimable(Settings& settings)
     cout << "\n[Animable] mode" << endl;
 
     vague();
-    damier();
-
-    vagueGray();
-    damierRGBAFloat4();
-    damierHSBAFloat4();
-    damierHueFloat();
+//    damier();
+//
+//    vagueGray();
+//    damierRGBAFloat4();
+//    damierHSBAFloat4();
+//    damierHueFloat();
 
     cout << "\n[Animable] end" << endl;
 

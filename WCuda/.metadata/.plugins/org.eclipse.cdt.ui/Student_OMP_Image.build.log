@@ -1,4 +1,4 @@
-16:59:33 **** Incremental Build of configuration GCC_parallel for project Student_OMP_Image ****
+19:36:15 **** Incremental Build of configuration GCC_parallel for project Student_OMP_Image ****
 cbicc gcc jall 
 
 --------------------------------------------------------
@@ -110,6 +110,9 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 [CBI] ->              : src/core/02_Mandelbrot/a_animable/
 [CBI] ->              : src/core/02_Mandelbrot/a_animable/math/
 [CBI] ->              : src/core/02_Mandelbrot/b_provider/
+[CBI] ->              : src/core/03_Julia/a_animable/
+[CBI] ->              : src/core/03_Julia/a_animable/math/
+[CBI] ->              : src/core/03_Julia/b_provider/
 
 [CBI] -> LIB_PATH (auto detect):
 
@@ -236,9 +239,11 @@ make[1]: Nothing to be done for `compilelink'.
 
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
+Warning : symlink INC_SYMLINK/PROJECT/Mandelbrot.h already exist for /home/arc18/CUDA/toStudent/code/WCuda/Student_OMP_Image//src/core/03_Julia/a_animable/Mandelbrot.h
+Warning : symlink INC_SYMLINK/PROJECT/MandelbrotMath.h already exist for /home/arc18/CUDA/toStudent/code/WCuda/Student_OMP_Image//src/core/03_Julia/a_animable/math/MandelbrotMath.h
 
 [CBI] -> Student_OMP_Image_gcc_x86_64 : End ALL!
 
 
-16:59:33 Build Finished (took 515ms)
+19:36:15 Build Finished (took 469ms)
 

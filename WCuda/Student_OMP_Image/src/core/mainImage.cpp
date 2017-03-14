@@ -2,6 +2,8 @@
 
 #include "RipplingProvider.h"
 #include "MandelbrotProvider.h"
+#include "JuliaProvider.h"
+#include "MandelbrotV2Provider.h"
 
 #include "Viewer_CPU.h"
 #include "Settings_CPU.h"
@@ -51,7 +53,9 @@ int mainImage(Settings& settings)
     ImageOption nozoomable(false);
 
     //Viewer<RipplingProvider> rippling(nozoomable, 0, 0); //  imageOption px py
-    Viewer<MandelbrotProvider> mandelbrot(zoomable, 25, 25);
+    //Viewer<MandelbrotProvider> mandelbrot(zoomable, 25, 25);
+    Viewer<JuliaProvider> julia(zoomable, 25, 25);
+    Viewer<MandelbrotV2Provider> mandelbrotV2(zoomable, 25, 25);
 
     GLUTImageViewers::runALL();  // Bloquant, Tant qu'une fenetre est ouverte
 

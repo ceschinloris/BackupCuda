@@ -79,14 +79,14 @@
 		</list>
 	</section>
 	<section name="NewClassWizardPage">
-		<item value="false" key="stubSelected1"/>
+		<item value="true" key="stubSelected1"/>
 		<item value="true" key="stubVirtual1"/>
 		<item value="true" key="namespaceSelected"/>
 		<item value="false" key="stubInline0"/>
 		<item value="false" key="stubInline1"/>
-		<item value="q" key="namespace"/>
+		<item value="gpu" key="namespace"/>
 		<item value="false" key="testFileSelected"/>
-		<item value="false" key="stubSelected0"/>
+		<item value="true" key="stubSelected0"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>

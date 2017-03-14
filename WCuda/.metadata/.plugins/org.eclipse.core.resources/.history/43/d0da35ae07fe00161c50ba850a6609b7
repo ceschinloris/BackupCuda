@@ -1,0 +1,85 @@
+#pragma once
+
+#include <math.h>
+#include "MathTools.h"
+
+#include "Calibreur_CPU.h"
+#include "ColorTools_CPU.h"
+using namespace cpu;
+
+
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+class FractaleMath
+    {
+	/*--------------------------------------*\
+	|*		Constructor		*|
+	 \*-------------------------------------*/
+
+    public:
+
+	FractaleMath(uint n) :
+		calibreur(Interval<float>(0, n), Interval<float>(0, 1))
+	    {
+	    this->n = n;
+	    }
+
+	virtual ~FractaleMath()
+	    {
+	    // rien
+	    }
+
+	/*--------------------------------------*\
+	|*		Methodes		*|
+	 \*-------------------------------------*/
+
+    public:
+
+	void colorXY(uchar4* ptrColor, float x, float y, float t)
+	    {
+	    int z = f(x, y, t);
+
+	    if (z == t)
+		{
+		ptrColor->x = 0;
+		ptrColor->y = 0;
+		ptrColor->z = 0;
+		}
+	    else
+		{
+		float hue01 = z;
+		calibreur.calibrer(hue01);
+		ColorTools::HSB_TO_RVB(hue01, ptrColor); // update color
+		}
+
+	    ptrColor->w = 255; // opaque
+	    }
+
+    protected:
+
+	virtual int f(float x, float y, float t);
+
+	/*--------------------------------------*\
+	|*		Attributs		*|
+	 \*-------------------------------------*/
+
+    private:
+
+	// Input
+	uint n;
+
+	// Tools
+	Calibreur<float> calibreur;
+
+    };
+
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

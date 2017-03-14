@@ -3,6 +3,8 @@
 
 #include "RipplingProvider.h"
 #include "MandelbrotProvider.h"
+#include "JuliaProvider.h"
+#include "MandelbrotV2Provider.h"
 
 #include "Animateur_CPU.h"
 #include "Settings_CPU.h"
@@ -32,6 +34,8 @@ int mainAnimable(Settings& settings);
 
 static void rippling();
 static void mandelbrot();
+static void julia();
+static void mandelbrotV2();
 
 // Tools
 template<typename T>
@@ -50,7 +54,9 @@ int mainAnimable(Settings& settings)
     cout << "\n[Animable] mode" << endl;
 
     // rippling();
-    mandelbrot();
+    // mandelbrot();
+    // julia();
+    mandelbrotV2();
 
     cout << "\n[Animable] end" << endl;
 
@@ -76,6 +82,22 @@ void mandelbrot()
 
     MandelbrotProvider provider;
     animer<uchar4>(&provider,NB_ITERATION);
+    }
+
+void julia()
+    {
+
+    const int NB_ITERATION = 1000;
+
+    JuliaProvider provider;
+    animer<uchar4>(&provider,NB_ITERATION);
+    }
+
+void mandelbrotV2()
+    {
+    const int NB_ITERATION = 1000;
+    MandelbrotV2Provider provider;
+    animer<uchar4>(&provider, NB_ITERATION);
     }
 /*-----------------------------------*\
  |*		Tools	        	*|

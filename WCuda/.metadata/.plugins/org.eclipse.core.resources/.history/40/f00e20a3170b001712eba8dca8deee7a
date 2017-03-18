@@ -1,0 +1,109 @@
+#include "RayTracing.h"
+
+#include <iostream>
+#include <assert.h>
+
+#include "Device.h"
+#include <assert.h>
+
+using std::cout;
+using std::endl;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern __global__ void rayTracing(uchar4* ptrDevPixels,uint w, uint h,float t, Sphere* sphereTab, uint nbSphere);
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*-------------------------*\
+ |*	Constructeur	    *|
+ \*-------------------------*/
+
+RayTracing::RayTracing(const Grid& grid, uint w, uint h, float dt, uint nbSphere) :
+	Animable_I<uchar4>(grid, w, h, "RayTracing_Cuda_RGBA_uchar4")
+    {
+    assert(w == h); // specific rippling
+
+    // Inputs
+    this->dt = dt;
+    this->nbSphere = nbSphere;
+    // Tools
+    this->t = 0; // protected dans Animable
+
+    // this->sphereTab = SphereCreator(nbSphere, w, h, 200).getTabSphere();
+    this->sphereTab = new Sphere[1];
+
+    float3 centre;
+    centre.x = 50.f;
+    centre.y = 50.f;
+    centre.z = 10.f;
+    float rayon = 10.f;
+    float hue01 = 0.8.f;
+    this->sphereTab[0] = Sphere(centre, rayon, hue01);
+    }
+
+RayTracing::~RayTracing()
+    {
+    // rien
+    //delete(this->creator);
+    }
+
+/*-------------------------*\
+ |*	Methode		    *|
+ \*-------------------------*/
+
+/**
+ * Override
+ * Call periodicly by the API
+ *
+ * Note : domaineMath pas use car pas zoomable
+ */
+void RayTracing::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath& domaineMath)
+    {
+    Device::lastCudaError("raytracing rgba uchar4 (before kernel)"); // facultatif, for debug only, remove for release
+
+
+    rayTracing<<<dg,db>>>(ptrDevPixels, w, h, t, this->sphereTab, this->nbSphere);
+
+    // le kernel est importer ci-dessus (ligne 19)
+
+    Device::lastCudaError("raytracing rgba uchar4 (after kernel)"); // facultatif, for debug only, remove for release
+    }
+
+/**
+ * Override
+ * Call periodicly by the API
+ */
+void RayTracing::animationStep()
+    {
+    t += dt;
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

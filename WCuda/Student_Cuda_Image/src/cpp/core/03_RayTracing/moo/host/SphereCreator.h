@@ -3,33 +3,29 @@
 class SphereCreator
     {
 	/*--------------------------------------*\
-|*
-	 Constructor
-	 *|
+	|*	Constructor 			*|
 	 \*-------------------------------------*/
     public:
 	SphereCreator(int nbSpheres, int w, int h, int bord = 200);
 	virtual ~SphereCreator(void);
 	/*--------------------------------------*\
-|*
-	 Methodes
-	 *|
+	|*	Methodes 			*|
 	 \*-------------------------------------*/
     public:
 	Sphere* getTabSphere();
     private:
 	void createSphere(void);
+
 	/*--------------------------------------*\
-|*
-	 Attributs
-	 *|
+	|*	Attributs			*|
 	 \*-------------------------------------*/
     private:
-// Inputs
+	// Inputs
 	int nbSpheres;
 	int w;
 	int h;
 	int bord;
-// Tools
+
+	// Tools
 	Sphere* tabSphere;
     };

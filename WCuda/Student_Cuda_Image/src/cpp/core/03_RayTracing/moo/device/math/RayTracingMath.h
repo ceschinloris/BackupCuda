@@ -4,6 +4,9 @@
 #include "MathTools.h"
 
 #include "ColorTools_GPU.h"
+
+#include "Sphere.h"
+
 using namespace gpu;
 
 /*----------------------------------------------------------------------*\
@@ -23,15 +26,16 @@ class RayTracingMath
 
     public:
 
-	__device__ RayTracingMath(int w, int h)
+	__device__ RayTracingMath(int nbSphere, Sphere* ptrDevTabSphere)
 	    {
-	    this->dim2 = w / 2;
+	    this->nbSphere = nbSphere;
+	    this->ptrDevTabSphere = ptrDevTabSphere;
 	    }
 
 	// constructeur copie automatique car pas pointeur dans VagueMath
 
 	__device__
-	    virtual ~RayTracingMath()
+	 virtual ~RayTracingMath()
 	    {
 	    // rien
 	    }
@@ -45,34 +49,51 @@ class RayTracingMath
 	__device__
 	void colorIJ(uchar4* ptrColor, int i, int j, float t)
 	    {
-	    uchar levelGris;
+	    float min = 1000.f;
+	    float hueMin = -1000.f;
+	    float brightnessMin = -1000.f;
 
-	    f(&levelGris, i, j, t); // update levelGris
+	    float2 position;
+	    position.x = i;
+	    position.y = j;
 
-	    ptrColor->x = levelGris;
-	    ptrColor->y = levelGris;
-	    ptrColor->z = levelGris;
+	    // Parcourir toutes les spheres
+	    for(int i = 0; i < this->nbSphere; i++)
+		{
+		Sphere sphere = this->ptrDevTabSphere[i];
+		float hCarre = sphere.hCarre(position);
 
-	    ptrColor->w = 255; // opaque
+		if(sphere.isEnDessous(hCarre))
+		    {
+		    float dz = sphere.dz(hCarre);
+		    float distance = sphere.distance(dz);
+
+		    if(distance < min)
+			{
+			min = distance;
+			hueMin = sphere.hue(t);
+			brightnessMin = sphere.brightness(dz);
+			}
+		    }
+		}
+
+	    // Afficher la bonne couleur OU noir
+	    if (hueMin >= 0)
+		{
+		ColorTools::HSB_TO_RVB(hueMin,1.f, brightnessMin, ptrColor);
+		}
+	    else
+		{
+		ptrColor->x = 0;
+		ptrColor->y = 0;
+		ptrColor->z = 0;
+		}
+
+	    // Opacité
+	    ptrColor->w = 255;
 	    }
 
     private:
-
-	__device__
-	void f(uchar* ptrLevelGris, int i, int j, float t)
-	    {
-	    float dijResult = dij(i, j);
-
-	    *ptrLevelGris = 128.f + 127.f * cosf(dijResult / 10.f - t / 7.f) / (dijResult / 10.f + 1.f);
-	    }
-
-	__device__
-	float dij(int i, int j)
-	    {
-	    float fi = i - dim2;
-	    float fj = j - dim2;
-	    return sqrtf(fi * fi + fj * fj);
-	    }
 
 	/*--------------------------------------*\
 	|*		Attributs		*|
@@ -80,8 +101,9 @@ class RayTracingMath
 
     private:
 
-	// Tools
-	float dim2;
+	// Inputs
+	int nbSphere;
+	Sphere* ptrDevTabSphere;
 
     };
 

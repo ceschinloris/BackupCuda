@@ -82,6 +82,7 @@ RayTracing::RayTracing(int nbSphere, const Grid& grid, uint w, uint h, float dt)
 
 RayTracing::~RayTracing()
     {
+    Device::free(ptrDevTabSphere);
     // rien
     }
 

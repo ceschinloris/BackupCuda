@@ -1,4 +1,4 @@
-19:36:15 **** Incremental Build of configuration GCC_parallel for project Student_OMP_Image ****
+09:31:09 **** Incremental Build of configuration GCC_parallel for project Student_OMP_Image ****
 cbicc gcc jall 
 
 --------------------------------------------------------
@@ -239,11 +239,9 @@ make[1]: Nothing to be done for `compilelink'.
 
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
-Warning : symlink INC_SYMLINK/PROJECT/Mandelbrot.h already exist for /home/arc18/CUDA/toStudent/code/WCuda/Student_OMP_Image//src/core/03_Julia/a_animable/Mandelbrot.h
-Warning : symlink INC_SYMLINK/PROJECT/MandelbrotMath.h already exist for /home/arc18/CUDA/toStudent/code/WCuda/Student_OMP_Image//src/core/03_Julia/a_animable/math/MandelbrotMath.h
 
 [CBI] -> Student_OMP_Image_gcc_x86_64 : End ALL!
 
 
-19:36:15 Build Finished (took 469ms)
+09:31:10 Build Finished (took 565ms)
 

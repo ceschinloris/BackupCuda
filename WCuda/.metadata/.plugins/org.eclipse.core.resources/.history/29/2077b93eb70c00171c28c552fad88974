@@ -1,4 +1,4 @@
-#include "RayTracing.h"
+#include "Mandelbrot.h"
 
 #include <iostream>
 #include <assert.h>
@@ -17,7 +17,7 @@ using std::endl;
  |*		Imported	 	*|
  \*-------------------------------------*/
 
-extern __global__ void rayTracing(uchar4* ptrDevPixels,uint w, uint h,float t);
+extern __global__ void mandelbrot(uint n, uchar4* ptrDevPixels,uint w, uint h,float t);
 
 /*--------------------------------------*\
  |*		Public			*|
@@ -39,8 +39,8 @@ extern __global__ void rayTracing(uchar4* ptrDevPixels,uint w, uint h,float t);
  |*	Constructeur	    *|
  \*-------------------------*/
 
-RayTracing::RayTracing(const Grid& grid, uint w, uint h, float dt) :
-	Animable_I<uchar4>(grid, w, h, "RayTracing_Cuda_RGBA_uchar4")
+Mandelbrot::Mandelbrot(const Grid& grid, uint w, uint h, float dt) :
+	Animable_I<uchar4>(grid, w, h, "Mandelbrot_Cuda_RGBA_uchar4")
     {
     assert(w == h); // specific rippling
 
@@ -49,14 +49,11 @@ RayTracing::RayTracing(const Grid& grid, uint w, uint h, float dt) :
 
     // Tools
     this->t = 0; // protected dans Animable
-    SphereCreator creator = new SphereCreator(10, w, h, 200);
-    this->sphereTab = creator.getTabSphere();
     }
 
-RayTracing::~RayTracing()
+Mandelbrot::~Mandelbrot()
     {
     // rien
-    delete(this->creator);
     }
 
 /*-------------------------*\
@@ -69,23 +66,22 @@ RayTracing::~RayTracing()
  *
  * Note : domaineMath pas use car pas zoomable
  */
-void RayTracing::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath& domaineMath)
+void Mandelbrot::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath& domaineMath)
     {
-    Device::lastCudaError("raytracing rgba uchar4 (before kernel)"); // facultatif, for debug only, remove for release
+    Device::lastCudaError("mandelbrot rgba uchar4 (before kernel)"); // facultatif, for debug only, remove for release
 
-
-    rayTracing <<<dg,db>>>(ptrDevPixels,w,h,t,sphereTab);
+    mandelbrot <<<dg,db>>>(10,ptrDevPixels,w,h,t);
 
     // le kernel est importer ci-dessus (ligne 19)
 
-    Device::lastCudaError("raytracing rgba uchar4 (after kernel)"); // facultatif, for debug only, remove for release
+    Device::lastCudaError("mandelbrot rgba uchar4 (after kernel)"); // facultatif, for debug only, remove for release
     }
 
 /**
  * Override
  * Call periodicly by the API
  */
-void RayTracing::animationStep()
+void Mandelbrot::animationStep()
     {
     t += dt;
     }

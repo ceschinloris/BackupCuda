@@ -48,7 +48,12 @@ class MandelbrotMath
 
 	void colorXY(uchar4* ptrColor, float x, float y, float t)
 	    {
+	    const int TID = OmpTools::getTid();
 	    int z = f(x, y, t);
+
+	    if (TID == 0){
+		printf("x = %f, y = %f, z = %f \n", x, y, z);
+	    }
 
 	    if (z == t)
 		{

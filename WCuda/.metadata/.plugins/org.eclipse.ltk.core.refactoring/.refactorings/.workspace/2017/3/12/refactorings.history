@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 7 resources" deleteContents="false" description="Delete 7 resources" element1="/Student_Cuda_Image/src/cpp/core/02_Mandelbrot_Julia/moo/device/math/FractaleMath.cpp" element2="/Student_Cuda_Image/src/cpp/core/02_Mandelbrot_Julia/moo/device/math/FractaleMath.h" element3="/Student_Cuda_Image/src/cpp/core/02_Mandelbrot_Julia/moo/device/math/JuliaMath.h" element4="/Student_Cuda_Image/src/cpp/core/02_Mandelbrot_Julia/moo/device/math/MandelbrotMath.h" element5="/Student_Cuda_Image/src/cpp/core/02_Mandelbrot_Julia/moo/device/FractaleDevice.cu" element6="/Student_Cuda_Image/src/cpp/core/02_Mandelbrot_Julia/moo/device/JuliaDevice.cu" element7="/Student_Cuda_Image/src/cpp/core/02_Mandelbrot_Julia/moo/device/MandelbrotDevice.cu" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="7" stamp="1489933257155"/>
+</session>

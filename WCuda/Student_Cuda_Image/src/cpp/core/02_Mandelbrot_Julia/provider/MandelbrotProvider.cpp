@@ -52,7 +52,7 @@ Animable_I<uchar4>* MandelbrotProvider::createAnimable()
 
     dim3 dg = dim3(mp, 2, 1);  		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
     dim3 db = dim3(coreMP, 2, 1);   	// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
-    Grid grid(dg, db);  // TODO definissez une grille cuda (dg, db)
+    Grid grid(dg, db);
 
     return new Mandelbrot(nMin, nMax, grid, dw, dh, domaineMath);
     }

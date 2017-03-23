@@ -1,5 +1,5 @@
-21:32:22 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
-cbicc cuda jall 
+19:15:35 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Image ****
+cbicc cuda all 
 
 --------------------------------------------------------
 [Runtime] : gcc x86
@@ -78,7 +78,7 @@ Built on Sun_Sep__4_22:14:01_CDT_2016
 Cuda compilation tools, release 8.0, V8.0.44
 
 
-[CUDA GCC] : jall
+[CUDA GCC] : all
 
 
 ==================================================================================
@@ -277,6 +277,7 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : boost_container-gcc484
 [CBI] ->              : boost_container-icc17
 [CBI] ->              : boost_date_time-gcc484
+cp: cannot create regular file ‘../RELEASE/bin/Student_Cuda_Image_cuda_80_x86_64.run’: Text file busy
 [CBI] ->              : boost_date_time-icc17
 [CBI] ->              : boost_filesystem-gcc484
 [CBI] ->              : boost_filesystem-icc17
@@ -373,17 +374,14 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : opencv_videostab_gcc484
 
 
-[CBI] -> Compilation parallel (32 threads)
-
-make[1]: Nothing to be done for `compilelink'.
 
 [CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_Image_cuda_80_x86_64.run
 
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
 
-[CBI] -> Student_Cuda_Image_cuda_80_x86_64 : End ALL!
+[CBI] -> Student_Cuda_Image_cuda_80_x86_64   : End ALL!
 
 
-21:32:23 Build Finished (took 1s.79ms)
+19:15:35 Build Finished (took 367ms)
 

@@ -23,16 +23,12 @@ class RipplingMath
 
     public:
 
-	__device__
-	RipplingMath(int w, int h)
+	__device__ RipplingMath(int w, int h)
 	    {
 	    this->dim2 = w / 2;
 	    }
 
-	// constructeur copie automatique car pas pointeur dans VagueMath
-
-	__device__
-	   virtual ~RipplingMath()
+	__device__ virtual ~RipplingMath()
 	    {
 	    // rien
 	    }
@@ -43,8 +39,7 @@ class RipplingMath
 
     public:
 
-	__device__
-	void colorIJ(uchar4* ptrColor, int i, int j, float t)
+	__device__ void colorIJ(uchar4* ptrColor, int i, int j, float t)
 	    {
 	    uchar levelGris;
 
@@ -59,16 +54,14 @@ class RipplingMath
 
     private:
 
-	__device__
-	void f(uchar* ptrLevelGris, int i, int j, float t)
+	__device__ void f(uchar* ptrLevelGris, int i, int j, float t)
 	    {
 	    float dijResult = dij(i, j);
 
 	    *ptrLevelGris = 128.f + 127.f*cosf(dijResult/10.f - t/7.f)/(dijResult/10.f + 1.f);
 	    }
 
-	__device__
-	float  dij(int i, int j)
+	__device__ float  dij(int i, int j)
 	    {
 	    float fi = i-dim2;
 	    float fj = j-dim2;

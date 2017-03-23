@@ -6,8 +6,9 @@
 #include "cudaTools.h"
 
 #include "RipplingProvider.h"
-#include "RayTracingProvider.h"
 #include "MandelbrotProvider.h"
+#include "JuliaProvider.h"
+#include "RayTracingProvider.h"
 
 #include "Settings_GPU.h"
 #include "Viewer_GPU.h"
@@ -51,11 +52,12 @@ int mainImage(Settings& settings)
 
     // ImageOption : (boolean,boolean) : (isSelection,isAnimation)
     ImageOption zoomable(true, true, true, true);
-    ImageOption nozoomable(false);
+    ImageOption nozoomable(false, true, true, true);
 
-    //Viewer<RipplingProvider> vague(nozoomable, 25, 25); // imageOption px py
-    Viewer<MandelbrotProvider> mandelbrot(zoomable, 25, 25);
-    //Viewer<RayTracingProvider> rayTracing(nozoomable, 25, 25);
+    //Viewer<RipplingProvider> rippling(nozoomable, 25, 25); // imageOption px py
+    //Viewer<MandelbrotProvider> mandelbrot(zoomable, 25, 25);
+    //Viewer<JuliaProvider> julia(zoomable, 25, 25);
+    Viewer<RayTracingProvider> rayTracing(nozoomable, 25, 25);
 
     // Common
     GLUTImageViewers::runALL(); // Bloquant, Tant qu'une fenetre est ouverte

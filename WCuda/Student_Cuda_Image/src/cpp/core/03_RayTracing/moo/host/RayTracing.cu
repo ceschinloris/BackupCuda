@@ -6,6 +6,7 @@
 #include "Device.h"
 
 #include "SphereCreator.h"
+#include "length_cm.h"
 
 using std::cout;
 using std::endl;
@@ -18,7 +19,11 @@ using std::endl;
  |*		Imported	 	*|
  \*-------------------------------------*/
 
-extern __global__ void rayTracing(Sphere* ptrDevTabSphere, int nbSphere, uchar4* ptrDevPixels, uint w, uint h, float t);
+extern __host__ void uploadGPU(Sphere* tabSphere);
+
+extern __global__ void rayTracingGM(Sphere* ptrDevTabSphere, uchar4* ptrDevPixels, uint w, uint h, float t);
+extern __global__ void rayTracingCM(uchar4* ptrDevPixels, uint w, uint h, float t);
+extern __global__ void rayTracingSM(Sphere* ptrDevTabSphere, uchar4* ptrDevPixels, uint w, uint h, float t);
 
 /*--------------------------------------*\
  |*		Public			*|
@@ -40,7 +45,7 @@ extern __global__ void rayTracing(Sphere* ptrDevTabSphere, int nbSphere, uchar4*
  |*	Constructeur	    *|
  \*-------------------------*/
 
-RayTracing::RayTracing(int nbSphere, const Grid& grid, uint w, uint h, float dt) :
+RayTracing::RayTracing(const Grid& grid, uint w, uint h, float dt) :
 	Animable_I<uchar4>(grid, w, h, "RayTracing_Cuda_RGBA_uchar4")
     {
     // Inputs
@@ -48,12 +53,13 @@ RayTracing::RayTracing(int nbSphere, const Grid& grid, uint w, uint h, float dt)
 
     // Tools
     this->t = 0; // protected dans Animable
-    this->nbSphere = nbSphere;
 
-    SphereCreator sphereCreator(nbSphere, w, h);
+    SphereCreator sphereCreator(LENGTH_CM, w, h);
     Sphere* ptrTabSphere = sphereCreator.getTabSphere();
 
-    this->sizeOctetSpheres = nbSphere * sizeof(Sphere);
+    uploadGPU(ptrTabSphere);
+
+    this->sizeOctetSpheres = LENGTH_CM * sizeof(Sphere);
 
     // MM
     	{
@@ -68,16 +74,7 @@ RayTracing::RayTracing(int nbSphere, const Grid& grid, uint w, uint h, float dt)
     	    {
     	    Device::memcpyHToD(ptrDevTabSphere, ptrTabSphere, sizeOctetSpheres);
     	    }
-
-    	Device::lastCudaError("RayTracing MM (end allocation)"); // temp debug, facultatif
     	}
-
-    // Grid
-	{
-	this->dg = grid.dg;
-	this->db = grid.db;
-	}
-
     }
 
 RayTracing::~RayTracing()
@@ -98,11 +95,27 @@ RayTracing::~RayTracing()
  */
 void RayTracing::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath& domaineMath)
     {
-    Device::lastCudaError("vague rgba uchar4 (before)"); // facultatif, for debug only, remove for release
+    /*
+    static int i = 0;
 
-    rayTracing<<<dg,db>>>(this->ptrDevTabSphere, this->nbSphere, ptrDevPixels, w, h, t);
+    if (i % 3 == 0)
+	{
+	rayTracingGM<<<dg,db>>>(this->ptrDevTabSphere, ptrDevPixels, w, h, t);
+	}
+    else if (i % 3 == 1)
+	{
+	rayTracingCM<<<dg,db>>>(ptrDevPixels, w, h, t);
+	}
+    else if(i % 3 == 2)
+	{
+	rayTracingSM<<<dg,db, this->sizeOctetSpheres>>>(this->ptrDevTabSphere, ptrDevPixels, w, h, t);
+	}
 
-    Device::lastCudaError("vague rgba uchar4 (after)"); // facultatif, for debug only, remove for release
+    i++;*/
+
+    rayTracingGM<<<dg,db>>>(this->ptrDevTabSphere, ptrDevPixels, w, h, t);
+    //rayTracingCM<<<dg,db>>>(ptrDevPixels, w, h, t);
+    //rayTracingSM<<<dg,db, this->sizeOctetSpheres>>>(this->ptrDevTabSphere, ptrDevPixels, w, h, t);
     }
 
 /**

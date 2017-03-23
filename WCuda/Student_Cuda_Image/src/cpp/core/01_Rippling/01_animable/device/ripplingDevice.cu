@@ -7,11 +7,6 @@
 #include "RipplingMath.h"
 using namespace gpu;
 
-// Attention : 	Choix du nom est impotant!
-//		VagueDevice.cu et non Vague.cu
-// 		Dans ce dernier cas, probl�me de linkage, car le nom du .cu est le meme que le nom d'un .cpp (host)
-//		On a donc ajouter Device (ou n'importequoi) pour que les noms soient diff�rents!
-
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
  \*---------------------------------------------------------------------*/
@@ -46,7 +41,6 @@ __global__ void rippling(uchar4* ptrDevPixels, uint w, uint h, float t)
     const int NB_THREAD = Indice2D::nbThread();
     const int WH = w * h;
 
-    // TODO pattern entrelacement
     int s = TID;
     int i, j;
     while (s < WH)

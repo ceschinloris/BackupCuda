@@ -48,10 +48,9 @@ Animable_I<uchar4>* RayTracingProvider::createAnimable()
     dim3 db = dim3(coreMP, 2, 1);   	// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
     Grid grid(dg, db);
 
-    // Nombre de spheres
-    int nbSphere = 1000;
+    // Nombre de spheres specifie dans length_cm.h
 
-    return new RayTracing(nbSphere, grid, dw, dh, dt);
+    return new RayTracing(grid, dw, dh, dt);
     }
 
 /**

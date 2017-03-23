@@ -63,16 +63,8 @@ Mandelbrot::~Mandelbrot()
  */
 void Mandelbrot::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath& domaineMath)
     {
-    Device::lastCudaError("mandelbrot rgba uchar4 (before kernel)"); // facultatif, for debug only, remove for release
-
     t = variateurAnimation.get();
     mandelbrot <<<dg,db>>>(ptrDevPixels,w,h,t,domaineMath);
-
-    // le kernel est importer ci-dessus (ligne 19)
-
-    Device::lastCudaError("mandelbrot rgba uchar4 (after kernel)"); // facultatif, for debug only, remove for release
-
-    Device::synchronize(); // Temp,debug, only for printf in  GPU
     }
 
 /**

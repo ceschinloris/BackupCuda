@@ -32,10 +32,7 @@ class RayTracingMath
 	    this->ptrDevTabSphere = ptrDevTabSphere;
 	    }
 
-	// constructeur copie automatique car pas pointeur dans VagueMath
-
-	__device__
-	 virtual ~RayTracingMath()
+	__device__ virtual ~RayTracingMath()
 	    {
 	    // rien
 	    }
@@ -46,22 +43,17 @@ class RayTracingMath
 
     public:
 
-	__device__
-	void colorIJ(uchar4* ptrColor, int i, int j, float t)
+	__device__ void colorIJ(uchar4* ptrColor, int i, int j, float t)
 	    {
 	    float min = 1000.f;
 	    float hueMin = -1000.f;
 	    float brightnessMin = -1000.f;
 
-	    float2 position;
-	    position.x = i;
-	    position.y = j;
-
 	    // Parcourir toutes les spheres
-	    for(int i = 0; i < this->nbSphere; i++)
+	    for(int k = 0; k < this->nbSphere; k++)
 		{
-		Sphere sphere = this->ptrDevTabSphere[i];
-		float hCarre = sphere.hCarre(position);
+		Sphere sphere = this->ptrDevTabSphere[k];
+		float hCarre = sphere.hCarre(i,j);
 
 		if(sphere.isEnDessous(hCarre))
 		    {

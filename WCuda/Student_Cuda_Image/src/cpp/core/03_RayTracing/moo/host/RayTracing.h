@@ -23,7 +23,7 @@ class RayTracing: public Animable_I<uchar4>
 
     public:
 
-	RayTracing(int nbSphere, const Grid& grid, uint w, uint h, float dt);
+	RayTracing(const Grid& grid, uint w, uint h, float dt);
 	virtual ~RayTracing(void);
 
 	/*--------------------------------------*\
@@ -58,7 +58,6 @@ class RayTracing: public Animable_I<uchar4>
 	dim3 db;
 
 	// Tools
-	int nbSphere;
 	Sphere* ptrDevTabSphere;
 	size_t sizeOctetSpheres;
 

@@ -25,10 +25,10 @@ class Sphere
 	    }
 
 	__device__
-	float hCarre(float2 xySol)
+	float hCarre(float x, float y)
 	    {
-	    float a = (centre.x - xySol.x);
-	    float b = (centre.y - xySol.y);
+	    float a = (centre.x - x);
+	    float b = (centre.y - y);
 	    return a * a + b * b;
 	    }
 
@@ -65,9 +65,7 @@ class Sphere
 	__device__
 	float hue(float t) // usefull for animation
 	    {
-	    //return 0.5f + 0.5f * sinf(t + T + 3 * PI_FLOAT / 2); //Fonction originale, toutes les spheres ont la meme couleur
-	    float hue = hueStart + 1 + sinf(t + T + 3 * PI_FLOAT / 2);
-	    return hue - (int)hue; // Conversion en int = perte fps mais je pense que c'est mieux que modf(hue, 1.f)... A TESTER
+	    return 0.5f + 0.5f * sinf(t + hueStart + 3.f * PI_FLOAT / 2.f);
 	    }
 
     private:
@@ -78,6 +76,5 @@ class Sphere
 
 	// Tools
 	float rCarre;
-	float T; // usefull for animation
     };
 #endif

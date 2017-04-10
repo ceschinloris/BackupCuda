@@ -54,10 +54,10 @@ int mainAnimable(Settings& settings)
 
     // Attention : pas tous a la fois
 
-    rippling();
+    //rippling();
     // mandelbrot();
     // julia();
-    // rayTracing();
+    rayTracing();
     cout << "\n[Animable] end" << endl;
 
     return EXIT_SUCCESS;

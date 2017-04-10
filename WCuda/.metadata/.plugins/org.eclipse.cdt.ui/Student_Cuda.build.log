@@ -1,4 +1,4 @@
-21:11:57 **** Build of configuration CudaGCC_parallel for project Student_Cuda ****
+14:44:16 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -126,6 +126,9 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] -> INC_PATH (auto detect):
 [CBI] ->              : src/cpp/core/02_Hello_add_vector/00_tools/
 [CBI] ->              : src/cpp/core/02_Hello_add_vector/01_objet/host/
+[CBI] ->              : src/cpp/core/03_Slice/00_tools/
+[CBI] ->              : src/cpp/core/03_Slice/01_objet/host/
+[CBI] ->              : src/cpp/core/04_Montecarlo/host/
 [CBI] ->              : src/cpp/test/junit/01_Test_Hello/
 [CBI] ->              : src/cpp/test/junit/02_Test_Vector/
 
@@ -277,20 +280,182 @@ Cuda compilation tools, release 8.0, V8.0.44
 [Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
 [Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Hello_add_vector/00_tools/VectorTools.cpp
 [Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Hello_add_vector/01_objet/useAddVector.cpp
+[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/useMontecarlo.cpp
 [Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Hello/useHello.cpp
+[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice/01_objet/useSlice.cpp
 [Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Hello_add_vector/01_objet/device/addVector_device.cu
 [Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Hello_add_vector/01_objet/host/AddVector.cu
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montecarlo/device/create_generator.cu
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montecarlo/device/montecarlo.cu
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montecarlo/host/Montecarlo.cu
 [Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Hello/01_helloCuda.cu
 [Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Hello/02_hello_add.cu
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/01_objet/device/slice_device.cu
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/01_objet/host/Slice.cu
+src/cpp/core/03_Slice/01_objet/useSlice.cpp: In function ‘bool useSlice()’:
+src/cpp/core/03_Slice/01_objet/useSlice.cpp:59:53: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second: [enabled by default]
+     bool isOk = MathTools::isEquals(result, PI, 1e-6);
+                                                     ^
+In file included from src/cpp/core/03_Slice/01_objet/useSlice.cpp:4:0:
+/opt/api/cbi/tools/bilat_tools_cpp/301_004/INC/MathTools.h:73:14: note: candidate 1: static bool MathTools::isEquals(double, double, double)
+  static bool isEquals(double x1, double x2, double epsilon = 0);
+              ^
+/opt/api/cbi/tools/bilat_tools_cpp/301_004/INC/MathTools.h:46:14: note: candidate 2: static bool MathTools::isEquals(float, float, float)
+  static bool isEquals(float x1, float x2, float epsilon = 0);
+              ^
+ptxas info    : 77696 bytes gmem, 72 bytes cmem[3]
+ptxas info    : Compiling entry function '_Z10montecarloP17curandStateXORWOWjPj' for 'sm_52'
+ptxas info    : Function properties for _Z10montecarloP17curandStateXORWOWjPj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, 344 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : 28 bytes gmem
+ptxas info    : Compiling entry function '_Z9addVectorPfS_S_i' for 'sm_52'
+ptxas info    : Function properties for _Z9addVectorPfS_S_i
+    8 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 17 registers, 348 bytes cmem[0]
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z5slicePfj' for 'sm_52'
+ptxas info    : Function properties for _Z5slicePfj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 11 registers, 332 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : 32 bytes gmem
+ptxas info    : 19 bytes gmem
+ptxas info    : Compiling entry function '_Z9addScalariiPi' for 'sm_52'
+ptxas info    : Function properties for _Z9addScalariiPi
+    16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 11 registers, 336 bytes cmem[0]
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z11kernelHellov' for 'sm_52'
+ptxas info    : Function properties for _Z11kernelHellov
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 2 registers, 320 bytes cmem[0]
+ptxas info    : 32 bytes gmem
+ptxas info    : 77696 bytes gmem, 72 bytes cmem[3]
+ptxas info    : Compiling entry function '_Z15createGeneratorP17curandStateXORWOWi' for 'sm_52'
+ptxas info    : Function properties for _Z15createGeneratorP17curandStateXORWOWi
+    6440 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 332 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : 77728 bytes gmem, 72 bytes cmem[3]
+
+[CBI] -> Linking to   : /tmp/ramdrive/arc18/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->
+[CBI] ->              : -lBilatTools_CPP_301_004_gcc_x86_64
+[CBI] ->              : -lBilatTools_Cuda_301_004_cuda_80_x86_64
+[CBI] ->              : -lBilatTools_OMP_301_004_gcc_x86_64
+[CBI] ->              : -lCpp_Test_112_gcc_x86_64
+[CBI] ->              : -lOpenCL
+[CBI] ->              : -lboost_atomic-gcc484
+[CBI] ->              : -lboost_atomic-icc17
+[CBI] ->              : -lboost_chrono-gcc484
+[CBI] ->              : -lboost_chrono-icc17
+[CBI] ->              : -lboost_container-gcc484
+[CBI] ->              : -lboost_container-icc17
+[CBI] ->              : -lboost_date_time-gcc484
+[CBI] ->              : -lboost_date_time-icc17
+[CBI] ->              : -lboost_filesystem-gcc484
+[CBI] ->              : -lboost_filesystem-icc17
+[CBI] ->              : -lboost_graph-gcc484
+[CBI] ->              : -lboost_graph-icc17
+[CBI] ->              : -lboost_locale-gcc484
+[CBI] ->              : -lboost_locale-icc17
+[CBI] ->              : -lboost_log-gcc484
+[CBI] ->              : -lboost_log-icc17
+[CBI] ->              : -lboost_log_setup-gcc484
+[CBI] ->              : -lboost_log_setup-icc17
+[CBI] ->              : -lboost_math_c99-gcc484
+[CBI] ->              : -lboost_math_c99-icc17
+[CBI] ->              : -lboost_math_c99f-gcc484
+[CBI] ->              : -lboost_math_c99f-icc17
+[CBI] ->              : -lboost_math_c99l-gcc484
+[CBI] ->              : -lboost_math_c99l-icc17
+[CBI] ->              : -lboost_math_tr1-gcc484
+[CBI] ->              : -lboost_math_tr1-icc17
+[CBI] ->              : -lboost_math_tr1f-gcc484
+[CBI] ->              : -lboost_math_tr1f-icc17
+[CBI] ->              : -lboost_math_tr1l-gcc484
+[CBI] ->              : -lboost_math_tr1l-icc17
+[CBI] ->              : -lboost_prg_exec_monitor-gcc484
+[CBI] ->              : -lboost_prg_exec_monitor-icc17
+[CBI] ->              : -lboost_program_options-gcc484
+[CBI] ->              : -lboost_program_options-icc17
+[CBI] ->              : -lboost_random-gcc484
+[CBI] ->              : -lboost_random-icc17
+[CBI] ->              : -lboost_regex-gcc484
+[CBI] ->              : -lboost_regex-icc17
+[CBI] ->              : -lboost_serialization-gcc484
+[CBI] ->              : -lboost_serialization-icc17
+[CBI] ->              : -lboost_signals-gcc484
+[CBI] ->              : -lboost_signals-icc17
+[CBI] ->              : -lboost_system-gcc484
+[CBI] ->              : -lboost_system-icc17
+[CBI] ->              : -lboost_thread-gcc484
+[CBI] ->              : -lboost_thread-icc17
+[CBI] ->              : -lboost_timer-gcc484
+[CBI] ->              : -lboost_timer-icc17
+[CBI] ->              : -lboost_type_erasure-gcc484
+[CBI] ->              : -lboost_type_erasure-icc17
+[CBI] ->              : -lboost_unit_test_framework-gcc484
+[CBI] ->              : -lboost_unit_test_framework-icc17
+[CBI] ->              : -lboost_wave-gcc484
+[CBI] ->              : -lboost_wave-icc17
+[CBI] ->              : -lboost_wserialization-gcc484
+[CBI] ->              : -lboost_wserialization-icc17
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcuda
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcuinj64
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusolver
+[CBI] ->              : -lcusparse
+[CBI] ->              : -lgomp
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppi
+[CBI] ->              : -lnppial
+[CBI] ->              : -lnppicc
+[CBI] ->              : -lnppicom
+[CBI] ->              : -lnppidei
+[CBI] ->              : -lnppif
+[CBI] ->              : -lnppig
+[CBI] ->              : -lnppim
+[CBI] ->              : -lnppist
+[CBI] ->              : -lnppisu
+[CBI] ->              : -lnppitc
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvToolsExt
+[CBI] ->              : -lnvblas
+[CBI] ->              : -lnvgraph
+[CBI] ->              : -lnvidia-ml
+[CBI] ->              : -lnvrtc
+[CBI] ->              : -lnvrtc-builtins
 
 
-Compilation terminated.
-Compilation terminated.
+==================================================================================
+[CBI] -> Target Name  : Student_Cuda_cuda_80_x86_64
+[CBI] -> Location     : /tmp/ramdrive/arc18/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 	      : Linux
+[CBI] -> User	 	  : arc18
+[CBI] ->
+[CBI] -> Compilateur  : g++ && nvcc
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 3 (s)
+==================================================================================
 
-Compilation terminated.
-make[1]: *** [/tmp/ramdrive/arc18/Targets/Student_Cuda/obj/addVector_device.o] Terminated
-make: *** [jall] Terminated
-Command canceled
 
-21:11:58 Build Cancelled (took 1s.431ms)
+[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_cuda_80_x86_64.run
+
+[CBI] -> Symlink Project Inc
+[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
+
+[CBI] -> Student_Cuda_cuda_80_x86_64 : End ALL!
+
+
+14:44:19 Build Finished (took 3s.463ms)
 

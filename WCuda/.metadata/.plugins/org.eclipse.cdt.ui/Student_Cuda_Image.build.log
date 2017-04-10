@@ -1,4 +1,4 @@
-19:15:35 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Image ****
+12:41:26 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Image ****
 cbicc cuda all 
 
 --------------------------------------------------------
@@ -277,7 +277,6 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : boost_container-gcc484
 [CBI] ->              : boost_container-icc17
 [CBI] ->              : boost_date_time-gcc484
-cp: cannot create regular file ‘../RELEASE/bin/Student_Cuda_Image_cuda_80_x86_64.run’: Text file busy
 [CBI] ->              : boost_date_time-icc17
 [CBI] ->              : boost_filesystem-gcc484
 [CBI] ->              : boost_filesystem-icc17
@@ -373,6 +372,201 @@ cp: cannot create regular file ‘../RELEASE/bin/Student_Cuda_Image_cuda_80_x86_
 [CBI] ->              : opencv_videoio_gcc484
 [CBI] ->              : opencv_videostab_gcc484
 
+[CBI] -> Create folder : /tmp/ramdrive/arc18/Targets/Student_Cuda_Image/bin
+[CBI] -> Create folder : /tmp/ramdrive/arc18/Targets/Student_Cuda_Image/obj
+[CBI] -> Create folder : /tmp/ramdrive/arc18/Targets/Student_Cuda_Image/cubin
+
+[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
+[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainAnimable.cpp
+[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainBarivox.cpp
+[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainBruteForce.cpp
+[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainImage.cpp
+[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/provider/RayTracingProvider.cpp
+[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/moo/host/SphereCreator.cpp
+[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Rippling/02_provider/RipplingProvider.cpp
+[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Mandelbrot_Julia/provider/JuliaProvider.cpp
+[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Mandelbrot_Julia/provider/MandelbrotProvider.cpp
+[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/moo/device/RayTracingDevice.cu
+ptxas info    : 32 bytes gmem, 12000 bytes cmem[3]
+ptxas info    : Compiling entry function '_Z12rayTracingCMP6uchar4jjf' for 'sm_52'
+ptxas info    : Function properties for _Z12rayTracingCMP6uchar4jjf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, 340 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z12rayTracingGMP6SphereP6uchar4jjf' for 'sm_52'
+ptxas info    : Function properties for _Z12rayTracingGMP6SphereP6uchar4jjf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, 348 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z12rayTracingSMP6SphereP6uchar4jjf' for 'sm_52'
+ptxas info    : Function properties for _Z12rayTracingSMP6SphereP6uchar4jjf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, 348 bytes cmem[0]
+[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/moo/host/RayTracing.cu
+ptxas info    : 96 bytes gmem
+[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Rippling/01_animable/device/ripplingDevice.cu
+ptxas info    : 32 bytes gmem
+ptxas info    : Compiling entry function '_Z8ripplingP6uchar4jjf' for 'sm_52'
+ptxas info    : Function properties for _Z8ripplingP6uchar4jjf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, 340 bytes cmem[0], 8 bytes cmem[2]
+[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Rippling/01_animable/host/Rippling.cu
+ptxas info    : 96 bytes gmem
+[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot_Julia/moo/device/juliaDevice.cu
+ptxas info    : 64 bytes gmem
+ptxas info    : Compiling entry function '_Z5juliaffP6uchar4jjfN3gpu11DomaineMathE' for 'sm_52'
+ptxas info    : Function properties for _Z5juliaffP6uchar4jjfN3gpu11DomaineMathE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 17 registers, 400 bytes cmem[0], 12 bytes cmem[2]
+[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot_Julia/moo/device/mandelbrotDevice.cu
+ptxas info    : 64 bytes gmem
+ptxas info    : Compiling entry function '_Z10mandelbrotP6uchar4jjfN3gpu11DomaineMathE' for 'sm_52'
+ptxas info    : Function properties for _Z10mandelbrotP6uchar4jjfN3gpu11DomaineMathE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 17 registers, 392 bytes cmem[0], 12 bytes cmem[2]
+[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot_Julia/moo/host/Julia.cu
+ptxas info    : 235 bytes gmem
+[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot_Julia/moo/host/Mandelbrot.cu
+ptxas info    : 235 bytes gmem
+
+[CBI] -> Linking to   : /tmp/ramdrive/arc18/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_cuda_80_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->
+[CBI] ->              : -lBilatTools_CPP_301_004_gcc_x86_64
+[CBI] ->              : -lBilatTools_Cuda_301_004_cuda_80_x86_64
+[CBI] ->              : -lBilatTools_Cuda_Image_301_004_cuda_80_x86_64
+[CBI] ->              : -lBilatTools_Image_OpenCV_Cuda_301_004_cuda_80_x86_64
+[CBI] ->              : -lBilatTools_OMP_301_004_gcc_x86_64
+[CBI] ->              : -lBilatTools_OpenCV_301_004_gcc_x86_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_301_gcc_x86_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_GL_301_gcc_x86_64
+[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_301_gcc_x86_64
+[CBI] ->              : -lBilat_Image_FreeGlut_301_gcc_x86_64
+[CBI] ->              : -lBilat_Image_FreeGlut_Cuda_301_cuda_80_x86_64
+[CBI] ->              : -lBilat_Image_GL_301_gcc_x86_64
+[CBI] ->              : -lBilat_Image_GL_Cuda_301_cuda_80_x86_64
+[CBI] ->              : -lBilat_OpenGL_Tools_301_gcc_x86_64
+[CBI] ->              : -lGL
+[CBI] ->              : -lGLEW
+[CBI] ->              : -lGLU
+[CBI] ->              : -lOpenCL
+[CBI] ->              : -lboost_atomic-gcc484
+[CBI] ->              : -lboost_atomic-icc17
+[CBI] ->              : -lboost_chrono-gcc484
+[CBI] ->              : -lboost_chrono-icc17
+[CBI] ->              : -lboost_container-gcc484
+[CBI] ->              : -lboost_container-icc17
+[CBI] ->              : -lboost_date_time-gcc484
+[CBI] ->              : -lboost_date_time-icc17
+[CBI] ->              : -lboost_filesystem-gcc484
+[CBI] ->              : -lboost_filesystem-icc17
+[CBI] ->              : -lboost_graph-gcc484
+[CBI] ->              : -lboost_graph-icc17
+[CBI] ->              : -lboost_locale-gcc484
+[CBI] ->              : -lboost_locale-icc17
+[CBI] ->              : -lboost_log-gcc484
+[CBI] ->              : -lboost_log-icc17
+[CBI] ->              : -lboost_log_setup-gcc484
+[CBI] ->              : -lboost_log_setup-icc17
+[CBI] ->              : -lboost_math_c99-gcc484
+[CBI] ->              : -lboost_math_c99-icc17
+[CBI] ->              : -lboost_math_c99f-gcc484
+[CBI] ->              : -lboost_math_c99f-icc17
+[CBI] ->              : -lboost_math_c99l-gcc484
+[CBI] ->              : -lboost_math_c99l-icc17
+[CBI] ->              : -lboost_math_tr1-gcc484
+[CBI] ->              : -lboost_math_tr1-icc17
+[CBI] ->              : -lboost_math_tr1f-gcc484
+[CBI] ->              : -lboost_math_tr1f-icc17
+[CBI] ->              : -lboost_math_tr1l-gcc484
+[CBI] ->              : -lboost_math_tr1l-icc17
+[CBI] ->              : -lboost_prg_exec_monitor-gcc484
+[CBI] ->              : -lboost_prg_exec_monitor-icc17
+[CBI] ->              : -lboost_program_options-gcc484
+[CBI] ->              : -lboost_program_options-icc17
+[CBI] ->              : -lboost_random-gcc484
+[CBI] ->              : -lboost_random-icc17
+[CBI] ->              : -lboost_regex-gcc484
+[CBI] ->              : -lboost_regex-icc17
+[CBI] ->              : -lboost_serialization-gcc484
+[CBI] ->              : -lboost_serialization-icc17
+[CBI] ->              : -lboost_signals-gcc484
+[CBI] ->              : -lboost_signals-icc17
+[CBI] ->              : -lboost_system-gcc484
+[CBI] ->              : -lboost_system-icc17
+[CBI] ->              : -lboost_thread-gcc484
+[CBI] ->              : -lboost_thread-icc17
+[CBI] ->              : -lboost_timer-gcc484
+[CBI] ->              : -lboost_timer-icc17
+[CBI] ->              : -lboost_type_erasure-gcc484
+[CBI] ->              : -lboost_type_erasure-icc17
+[CBI] ->              : -lboost_unit_test_framework-gcc484
+[CBI] ->              : -lboost_unit_test_framework-icc17
+[CBI] ->              : -lboost_wave-gcc484
+[CBI] ->              : -lboost_wave-icc17
+[CBI] ->              : -lboost_wserialization-gcc484
+[CBI] ->              : -lboost_wserialization-icc17
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcuda
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcuinj64
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusolver
+[CBI] ->              : -lcusparse
+[CBI] ->              : -lglut
+[CBI] ->              : -lgomp
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppi
+[CBI] ->              : -lnppial
+[CBI] ->              : -lnppicc
+[CBI] ->              : -lnppicom
+[CBI] ->              : -lnppidei
+[CBI] ->              : -lnppif
+[CBI] ->              : -lnppig
+[CBI] ->              : -lnppim
+[CBI] ->              : -lnppist
+[CBI] ->              : -lnppisu
+[CBI] ->              : -lnppitc
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvToolsExt
+[CBI] ->              : -lnvblas
+[CBI] ->              : -lnvgraph
+[CBI] ->              : -lnvidia-ml
+[CBI] ->              : -lnvrtc
+[CBI] ->              : -lnvrtc-builtins
+[CBI] ->              : -lopencv_calib3d_gcc484
+[CBI] ->              : -lopencv_core_gcc484
+[CBI] ->              : -lopencv_features2d_gcc484
+[CBI] ->              : -lopencv_flann_gcc484
+[CBI] ->              : -lopencv_highgui_gcc484
+[CBI] ->              : -lopencv_imgcodecs_gcc484
+[CBI] ->              : -lopencv_imgproc_gcc484
+[CBI] ->              : -lopencv_ml_gcc484
+[CBI] ->              : -lopencv_objdetect_gcc484
+[CBI] ->              : -lopencv_photo_gcc484
+[CBI] ->              : -lopencv_shape_gcc484
+[CBI] ->              : -lopencv_stitching_gcc484
+[CBI] ->              : -lopencv_superres_gcc484
+[CBI] ->              : -lopencv_video_gcc484
+[CBI] ->              : -lopencv_videoio_gcc484
+[CBI] ->              : -lopencv_videostab_gcc484
+
+
+==================================================================================
+[CBI] -> Target Name  : Student_Cuda_Image_cuda_80_x86_64
+[CBI] -> Location     : /tmp/ramdrive/arc18/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_cuda_80_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 	      : Linux
+[CBI] -> User	 	  : arc18
+[CBI] ->
+[CBI] -> Compilateur  : g++ && nvcc
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 29 (s)
+==================================================================================
 
 
 [CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_Image_cuda_80_x86_64.run
@@ -383,5 +577,5 @@ cp: cannot create regular file ‘../RELEASE/bin/Student_Cuda_Image_cuda_80_x86_
 [CBI] -> Student_Cuda_Image_cuda_80_x86_64   : End ALL!
 
 
-19:15:35 Build Finished (took 367ms)
+12:41:55 Build Finished (took 29s.634ms)
 

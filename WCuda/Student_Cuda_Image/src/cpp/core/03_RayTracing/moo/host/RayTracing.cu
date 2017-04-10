@@ -75,9 +75,6 @@ RayTracing::RayTracing(const Grid& grid, uint w, uint h, float dt) :
     	    Device::memcpyHToD(ptrDevTabSphere, ptrTabSphere, sizeOctetSpheres);
     	    }
     	}
-
-    	this->db = grid.db;
-    	this->db = grid.dg;
     }
 
 RayTracing::~RayTracing()
@@ -115,7 +112,11 @@ void RayTracing::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath
 	}
 
     i++;*/
+    int mp=Device::getMPCount();
+        int coreMP=Device::getCoreCountMP();
 
+        dim3 dg = dim3(mp, 2, 1);  		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
+        dim3 db = dim3(coreMP, 2, 1);
     rayTracingGM<<<dg,db>>>(this->ptrDevTabSphere, ptrDevPixels, w, h, t);
     //rayTracingCM<<<dg,db>>>(ptrDevPixels, w, h, t);
     //rayTracingSM<<<dg,db, this->sizeOctetSpheres>>>(this->ptrDevTabSphere, ptrDevPixels, w, h, t);

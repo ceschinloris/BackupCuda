@@ -1,0 +1,101 @@
+#include <iostream>
+
+#include "Device.h"
+#include "Montecarlo.h"
+
+using std::cout;
+using std::endl;
+
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+__global__ void createGenerator(curandState* tabDevGeneratorGM, int deviceId);
+__global__ void montecarlo(curandState* tabDevGeneratorGM, uint nbDarts, uint* ptrDevNxTotal);
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Constructeur			*|
+ \*-------------------------------------*/
+
+Montecarlo::Montecarlo(const Grid& grid, float* ptrResult, int nbDartsTotal)
+    {
+    this->ptrResult = ptrResult;
+    this->nbDartsTotal = nbDartsTotal;
+    this->sizeOctetResultGM = sizeof(uint); // octet
+    this->sizeOctetGeneratorsGM = Device::nbThread(grid) * sizeof(curandState)
+    this->sizeOctetSM = Device::nbThread(grid) * sizeof(uint);
+
+    // MM
+	{
+
+	// MM (malloc Device)
+	    {
+	    Device::malloc(&ptrDevResult, sizeOctetResultGM);
+	    Device::memclear(ptrDevResult, sizeOctetResultGM);
+
+	    Device::malloc(&ptrDevGenerators, sizeOctetGeneratorsGM);
+	    Device::memclear(ptrDevGenerators, sizeOctetGeneratorsGM);
+	    }
+	}
+
+    // Grid
+	{
+	this->dg = grid.dg;
+	this->db = grid.db;
+	}
+
+    // Generators creation
+    createGenerator<<<dg,db>>>(tabDevGeneratorGM, deviceId); // assynchrone
+    }
+
+Montecarlo::~Montecarlo(void)
+    {
+    //MM (device free)
+	{
+	Device::free(ptrDevResult);
+	Device::free(ptrDevGenerators);
+	}
+    }
+
+/*--------------------------------------*\
+ |*		Methode			*|
+ \*-------------------------------------*/
+
+void Montecarlo::run()
+    {
+    Device::lastCudaError("montecarlo (before)"); // temp debug
+    montecarlo<<<dg,db, sizeOctetSM>>>(ptrDevGenerators, nbDarts, ptrDevResult); // assynchrone
+    Device::lastCudaError("montecarlo (after)"); // temp debug
+
+    Device::synchronize(); // Temp,debug, only for printf in  GPU
+
+    // MM (Device -> Host)
+	{
+	Device::memcpyDToH(ptrResult, ptrDevResult, sizeOctetGM); // barriere synchronisation implicite
+	}
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

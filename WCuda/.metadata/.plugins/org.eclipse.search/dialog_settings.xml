@@ -234,13 +234,13 @@
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.cmd"/>
-				<item value="*.mk"/>
-				<item value="*.h"/>
-				<item value=".*sh"/>
-				<item value="*.cu"/>
 				<item value="*.cpp"/>
+				<item value="*.cu"/>
+				<item value="*.h"/>
+				<item value="*.mk"/>
 				<item value="*.txt"/>
 				<item value=".*cu"/>
+				<item value=".*sh"/>
 			</list>
 			<list key="workingSets">
 			</list>
@@ -300,13 +300,13 @@
 		</list>
 	</section>
 	<section name="SearchDialog">
-		<item value="org.eclipse.cdt.ui.pdomSearchPage" key="PREVIOUS_PAGE"/>
+		<item value="org.eclipse.search.internal.ui.text.TextSearchPage" key="PREVIOUS_PAGE"/>
 	</section>
 	<section name="DialogBounds_SearchDialog">
-		<item value="661" key="DIALOG_WIDTH"/>
+		<item value="599" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="509" key="DIALOG_HEIGHT"/>
+		<item value="531" key="DIALOG_HEIGHT"/>
 		<item value="262" key="DIALOG_Y_ORIGIN"/>
-		<item value="477" key="DIALOG_X_ORIGIN"/>
+		<item value="359" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>

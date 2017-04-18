@@ -1,4 +1,4 @@
-14:44:16 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+09:15:21 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -267,75 +267,10 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : nvrtc
 [CBI] ->              : nvrtc-builtins
 
-[CBI] -> Create folder : /tmp/ramdrive/arc18/Targets/Student_Cuda/bin
-[CBI] -> Create folder : /tmp/ramdrive/arc18/Targets/Student_Cuda/obj
-[CBI] -> Create folder : /tmp/ramdrive/arc18/Targets/Student_Cuda/cubin
 
 [CBI] -> Compilation parallel (32 threads)
 
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/test/mainTest.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/01_Test_Hello/TestHello.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/02_Test_Vector/TestVector.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Hello_add_vector/00_tools/VectorTools.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Hello_add_vector/01_objet/useAddVector.cpp
 [Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/useMontecarlo.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Hello/useHello.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice/01_objet/useSlice.cpp
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Hello_add_vector/01_objet/device/addVector_device.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Hello_add_vector/01_objet/host/AddVector.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montecarlo/device/create_generator.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montecarlo/device/montecarlo.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montecarlo/host/Montecarlo.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Hello/01_helloCuda.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Hello/02_hello_add.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/01_objet/device/slice_device.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/01_objet/host/Slice.cu
-src/cpp/core/03_Slice/01_objet/useSlice.cpp: In function ‘bool useSlice()’:
-src/cpp/core/03_Slice/01_objet/useSlice.cpp:59:53: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second: [enabled by default]
-     bool isOk = MathTools::isEquals(result, PI, 1e-6);
-                                                     ^
-In file included from src/cpp/core/03_Slice/01_objet/useSlice.cpp:4:0:
-/opt/api/cbi/tools/bilat_tools_cpp/301_004/INC/MathTools.h:73:14: note: candidate 1: static bool MathTools::isEquals(double, double, double)
-  static bool isEquals(double x1, double x2, double epsilon = 0);
-              ^
-/opt/api/cbi/tools/bilat_tools_cpp/301_004/INC/MathTools.h:46:14: note: candidate 2: static bool MathTools::isEquals(float, float, float)
-  static bool isEquals(float x1, float x2, float epsilon = 0);
-              ^
-ptxas info    : 77696 bytes gmem, 72 bytes cmem[3]
-ptxas info    : Compiling entry function '_Z10montecarloP17curandStateXORWOWjPj' for 'sm_52'
-ptxas info    : Function properties for _Z10montecarloP17curandStateXORWOWjPj
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 14 registers, 344 bytes cmem[0], 4 bytes cmem[2]
-ptxas info    : 28 bytes gmem
-ptxas info    : Compiling entry function '_Z9addVectorPfS_S_i' for 'sm_52'
-ptxas info    : Function properties for _Z9addVectorPfS_S_i
-    8 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 17 registers, 348 bytes cmem[0]
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z5slicePfj' for 'sm_52'
-ptxas info    : Function properties for _Z5slicePfj
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 11 registers, 332 bytes cmem[0], 4 bytes cmem[2]
-ptxas info    : 32 bytes gmem
-ptxas info    : 19 bytes gmem
-ptxas info    : Compiling entry function '_Z9addScalariiPi' for 'sm_52'
-ptxas info    : Function properties for _Z9addScalariiPi
-    16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 11 registers, 336 bytes cmem[0]
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z11kernelHellov' for 'sm_52'
-ptxas info    : Function properties for _Z11kernelHellov
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 2 registers, 320 bytes cmem[0]
-ptxas info    : 32 bytes gmem
-ptxas info    : 77696 bytes gmem, 72 bytes cmem[3]
-ptxas info    : Compiling entry function '_Z15createGeneratorP17curandStateXORWOWi' for 'sm_52'
-ptxas info    : Function properties for _Z15createGeneratorP17curandStateXORWOWi
-    6440 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 32 registers, 332 bytes cmem[0], 4 bytes cmem[2]
-ptxas info    : 77728 bytes gmem, 72 bytes cmem[3]
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc18/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
 
@@ -445,7 +380,7 @@ ptxas info    : 77728 bytes gmem, 72 bytes cmem[3]
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 3 (s)
+[CBI] -> Time		  : 1 (s)
 ==================================================================================
 
 
@@ -457,5 +392,5 @@ ptxas info    : 77728 bytes gmem, 72 bytes cmem[3]
 [CBI] -> Student_Cuda_cuda_80_x86_64 : End ALL!
 
 
-14:44:19 Build Finished (took 3s.463ms)
+09:15:22 Build Finished (took 1s.279ms)
 

@@ -37,7 +37,7 @@ bool useMontecarlo(void);
 bool useMontecarlo()
     {
     int nbDarts = INT_MAX;
-    float m = 10;
+    float m = 20;
     double result;
 
     // Grid cuda

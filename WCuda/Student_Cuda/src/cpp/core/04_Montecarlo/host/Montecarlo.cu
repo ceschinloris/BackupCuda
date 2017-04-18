@@ -17,7 +17,7 @@ using std::endl;
  \*-------------------------------------*/
 
 extern __global__ void createGenerator(curandState* tabDevGeneratorGM, int deviceId);
-extern __global__ void montecarlo(curandState* tabDevGeneratorGM, uint nbDarts, uint* ptrDevNxTotal);
+extern __global__ void montecarlo(curandState* tabDevGeneratorGM, uint nbDarts, uint m, uint* ptrDevNxTotal);
 
 /*--------------------------------------*\
  |*		Public			*|
@@ -86,7 +86,7 @@ Montecarlo::~Montecarlo(void)
 void Montecarlo::run()
     {
     Device::lastCudaError("montecarlo (before)"); // temp debug
-    montecarlo<<<dg,db, sizeOctetSM>>>(ptrDevGenerators, nbDarts, ptrDevResult); // assynchrone
+    montecarlo<<<dg,db, sizeOctetSM>>>(ptrDevGenerators, nbDarts, m, ptrDevResult); // assynchrone
     Device::lastCudaError("montecarlo (after)"); // temp debug
 
     Device::synchronize(); // Temp,debug, only for printf in  GPU

@@ -36,7 +36,7 @@ __device__ float f(float x);
 /**
  * output : void required !!
  */
-__global__ void montecarlo(curandState* tabDevGeneratorGM, uint nbDarts, uint* ptrDevNxTotal)
+__global__ void montecarlo(curandState* tabDevGeneratorGM, uint nbDarts, uint m, uint* ptrDevNxTotal)
     {
     extern __shared__ uint TAB_SM[];
 
@@ -60,7 +60,7 @@ __global__ void montecarlo(curandState* tabDevGeneratorGM, uint nbDarts, uint* p
 	{
 	x = curand_uniform(&generator);
 	// * M NORMALEMENT VVV
-	y = curand_uniform(&generator) * 10;
+	y = curand_uniform(&generator) * m;
 
 	if ( y  < f(x) )
 	    {

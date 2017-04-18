@@ -14,7 +14,7 @@ using std::endl;
  |*		Imported	 	*|
  \*-------------------------------------*/
 
-#include "Montecarlo.h"
+#include "host/Montecarlo.h"
 
 /*--------------------------------------*\
  |*		Public			*|
@@ -38,7 +38,6 @@ bool useMontecarlo()
     {
     int nbDarts = INT_MAX;
     float m = 20;
-    double result;
 
     // Grid cuda
     int mp = Device::getMPCount();
@@ -47,9 +46,10 @@ bool useMontecarlo()
     dim3 db = dim3(64, 1, 1);   	// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
     Grid grid(dg, db);
 
-    Montecarlo montecarlo(grid, &result, nbDarts, m);
+    Montecarlo montecarlo(grid, nbDarts, m);
     montecarlo.run();
 
+    double result = montecarlo.getResult();
     printf("Resultat = %f\n", result);
 
 

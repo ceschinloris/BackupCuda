@@ -23,7 +23,7 @@ class Montecarlo
 	/**
 	 * update w by v1+v2
 	 */
-	Montecarlo(const Grid& grid, double* ptrResult, int nbDartsTotal, float m);
+	Montecarlo(const Grid& grid, long nbDartsTotal, float m);
 
 	virtual ~Montecarlo(void);
 
@@ -34,6 +34,8 @@ class Montecarlo
     public:
 
 	void run();
+	long getNbDartsUnder();
+	double getResult();
 
 	/*--------------------------------------*\
 	|*		Attributs		*|
@@ -44,14 +46,15 @@ class Montecarlo
 	// Inputs
 	dim3 dg;
 	dim3 db;
-	uint nbDartsTotal;
+	long nbDartsTotal;
 	float m;
 
-	// Inputs/Outputs
-	double* ptrResult;
+	// Outputs
+	double result;
+	long nbDartsUnder;
 
 	// Tools
-	uint* ptrDevResult;
+	long* ptrDevResult;
 	curandState* ptrDevGenerators;
 
 	size_t sizeOctetResultGM;

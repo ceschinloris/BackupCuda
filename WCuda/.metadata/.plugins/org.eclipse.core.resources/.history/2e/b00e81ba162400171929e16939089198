@@ -1,0 +1,81 @@
+#include <iostream>
+
+#include "Device.h"
+#include <curand_kernel.h>
+#include "MontecarloMultiGPU.h"
+
+using std::cout;
+using std::endl;
+
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern __global__ void createGenerator(curandState* tabDevGeneratorGM, int deviceId);
+extern __global__ void montecarlo(curandState* tabDevGeneratorGM, uint nbDarts, uint m, uint* ptrDevNxTotal);
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Constructeur			*|
+ \*-------------------------------------*/
+
+MontecarloMultiGPU::MontecarloMultiGPU(const Grid& grid, double* ptrResult, int nbDartsTotal, float m)
+    {
+    this->ptrResult = ptrResult;
+    this->nbDartsTotal = nbDartsTotal;
+    this->m = m;
+
+    // Grid
+    	{
+    	this->dg = grid.dg;
+    	this->db = grid.db;
+    	}
+    }
+
+MontecarloMultiGPU::~MontecarloMultiGPU(void)
+    {
+    }
+
+/*--------------------------------------*\
+ |*		Methode			*|
+ \*-------------------------------------*/
+
+void MontecarloMultiGPU::run()
+    {
+    uint nbDevice = Device::getDeviceCount();
+    uint nbDarts = this->nbDartsTotal / nbDevice;
+
+    for (int i = 0; i < nbDevice; i++)
+	{
+	Device::setDevice(i);
+	double result = 0;
+	Montecarlo montecarlo(grid, &result, nbDarts, m);
+	montecarlo.run();
+
+	printf("%d", result);
+	}
+
+    }
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

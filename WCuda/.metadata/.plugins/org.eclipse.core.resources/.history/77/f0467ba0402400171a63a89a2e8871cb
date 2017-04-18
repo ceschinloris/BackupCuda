@@ -1,0 +1,87 @@
+#include <iostream>
+
+#include "Device.h"
+#include <curand_kernel.h>
+#include "MontecarloMultiGPU.h"
+#include "Montecarlo.h"
+
+using std::cout;
+using std::endl;
+
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Constructeur			*|
+ \*-------------------------------------*/
+
+MontecarloMultiGPU::MontecarloMultiGPU(const Grid& grid, double* ptrResult, long nbDartsTotal, float m)
+    {
+    this->ptrResult = ptrResult;
+    this->nbDartsTotal = nbDartsTotal;
+    this->m = m;
+
+    // Grid
+    	{
+    	this->dg = grid.dg;
+    	this->db = grid.db;
+    	}
+    }
+
+MontecarloMultiGPU::~MontecarloMultiGPU(void)
+    {
+    }
+
+/*--------------------------------------*\
+ |*		Methode			*|
+ \*-------------------------------------*/
+
+void MontecarloMultiGPU::run()
+    {
+    //uint nbDevice = Device::getDeviceCount();
+    uint nbDevice = 1;
+    long nbDarts = this->nbDartsTotal / nbDevice;
+    long somme = 0;
+
+    #pragma omp parallel for reduction(+:somme)
+    for (int i = 1; i < nbDevice; i++)
+	{
+	Device::setDevice(i);
+
+	Grid grid(dg, db);
+
+	Montecarlo montecarlo(grid, nbDarts, m);
+	montecarlo.run();
+	somme = montecarlo.getNbDartsUnder();
+	}
+
+
+    *ptrResult = somme / (double) (nbDartsTotal * m);
+
+    }
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

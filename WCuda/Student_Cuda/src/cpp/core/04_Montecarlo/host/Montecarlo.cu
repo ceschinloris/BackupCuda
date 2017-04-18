@@ -1,7 +1,8 @@
+#include "Montecarlo.h"
+
 #include <iostream>
 
 #include "Device.h"
-#include "Montecarlo.h"
 #include <curand_kernel.h>
 
 using std::cout;
@@ -17,7 +18,7 @@ using std::endl;
  \*-------------------------------------*/
 
 extern __global__ void createGenerator(curandState* tabDevGeneratorGM, int deviceId);
-extern __global__ void montecarlo(curandState* tabDevGeneratorGM, uint nbDarts, uint m, uint* ptrDevNxTotal);
+extern __global__ void montecarlo(curandState* tabDevGeneratorGM, long nbDarts, uint m, long* ptrDevNxTotal);
 
 /*--------------------------------------*\
  |*		Public			*|
@@ -35,12 +36,12 @@ extern __global__ void montecarlo(curandState* tabDevGeneratorGM, uint nbDarts, 
  |*		Constructeur			*|
  \*-------------------------------------*/
 
-Montecarlo::Montecarlo(const Grid& grid, double* ptrResult, int nbDartsTotal, float m)
+Montecarlo::Montecarlo(const Grid& grid, long nbDartsTotal, float m)
     {
-    this->ptrResult = ptrResult;
+    this->result = 0;
     this->nbDartsTotal = nbDartsTotal;
     this->m = m;
-    this->sizeOctetResultGM = sizeof(uint); // octet
+    this->sizeOctetResultGM = sizeof(long); // octet
     this->sizeOctetGeneratorsGM = Device::nbThread(grid) * sizeof(curandState);
     this->sizeOctetSM = Device::nbThread(grid) * sizeof(uint);
 
@@ -68,6 +69,8 @@ Montecarlo::Montecarlo(const Grid& grid, double* ptrResult, int nbDartsTotal, fl
 
     // Calculate the number of darts for each threads
     this->nbDarts = nbDartsTotal / Device::nbThread(grid);
+
+    this->nbDartsUnder = 0;
     }
 
 Montecarlo::~Montecarlo(void)
@@ -91,14 +94,25 @@ void Montecarlo::run()
 
     Device::synchronize(); // Temp,debug, only for printf in  GPU
 
-    uint montecarloResult;
+    long montecarloResult;
 
     // MM (Device -> Host)
 	{
 	Device::memcpyDToH(&montecarloResult, ptrDevResult, sizeOctetResultGM); // barriere synchronisation implicite
 	}
 
-    *ptrResult = (double)montecarloResult / (double) nbDartsTotal * m;
+    nbDartsUnder = montecarloResult;
+    result = (double)montecarloResult / (double) nbDartsTotal * m;
+    }
+
+long Montecarlo::getNbDartsUnder()
+    {
+    return nbDartsUnder;
+    }
+
+double Montecarlo::getResult()
+    {
+    return result;
     }
 
 /*--------------------------------------*\

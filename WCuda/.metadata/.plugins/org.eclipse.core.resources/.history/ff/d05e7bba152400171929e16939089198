@@ -1,0 +1,76 @@
+#include <iostream>
+
+#include "Device.h"
+#include <curand_kernel.h>
+#include "MontecarloMultiGPU.h"
+
+using std::cout;
+using std::endl;
+
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern __global__ void createGenerator(curandState* tabDevGeneratorGM, int deviceId);
+extern __global__ void montecarlo(curandState* tabDevGeneratorGM, uint nbDarts, uint m, uint* ptrDevNxTotal);
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Constructeur			*|
+ \*-------------------------------------*/
+
+MontecarloMultiGPU::MontecarloMultiGPU(const Grid& grid, double* ptrResult, int nbDartsTotal, float m)
+    {
+    this->ptrResult = ptrResult;
+    this->nbDartsTotal = nbDartsTotal;
+    this->m = m;
+    }
+
+MontecarloMultiGPU::~MontecarloMultiGPU(void)
+    {
+    }
+
+/*--------------------------------------*\
+ |*		Methode			*|
+ \*-------------------------------------*/
+
+void MontecarloMultiGPU::run()
+    {
+    Device::lastCudaError("montecarlo (before)"); // temp debug
+    montecarlo<<<dg,db, sizeOctetSM>>>(ptrDevGenerators, nbDarts, m, ptrDevResult); // assynchrone
+    Device::lastCudaError("montecarlo (after)"); // temp debug
+
+    Device::synchronize(); // Temp,debug, only for printf in  GPU
+
+    uint montecarloResult;
+
+    // MM (Device -> Host)
+	{
+	Device::memcpyDToH(&montecarloResult, ptrDevResult, sizeOctetResultGM); // barriere synchronisation implicite
+	}
+
+    *ptrResult = (double)montecarloResult / (double) nbDartsTotal * m;
+    }
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

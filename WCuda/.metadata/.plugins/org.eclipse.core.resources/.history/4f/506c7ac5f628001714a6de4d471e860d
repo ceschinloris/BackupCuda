@@ -1,0 +1,98 @@
+#include <iostream>
+
+#include "Device.h"
+#include "Histogramme.h"
+
+using std::cout;
+using std::endl;
+
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern __global__ void histogramme(int* ptrTabPixelsGM, uint nbPixels, int* ptrHistogrammeGM);
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Constructeur			*|
+ \*-------------------------------------*/
+
+Histogramme::Histogramme(const Grid& grid, int* ptrResult, int dataMax)
+    {
+
+    DataCreator dataCreator(dataMax) ;
+    this->data = dataCreator.getTabData();
+    this->n= dataCreator.getLength();
+
+    this->ptrResult = ptrResult;
+
+    this->ptrTabResult = new int[SIZE_TAB_SM];
+    this->ptrTabData = new int[tabSize];
+
+
+    // MM
+	{
+
+	// MM (malloc Device)
+	    {
+	    Device::malloc(&ptrDevResult, sizeOctetResultGM);
+	    Device::memclear(ptrDevResult, sizeOctetResultGM);
+
+	    Device::malloc(&ptrDevGenerators, sizeOctetGeneratorsGM);
+	    Device::memclear(ptrDevGenerators, sizeOctetGeneratorsGM);
+	    }
+	}
+
+    // Grid
+	{
+	this->dg = grid.dg;
+	this->db = grid.db;
+	}
+    }
+
+Histogramme::~Histogramme(void)
+    {
+
+    }
+
+/*--------------------------------------*\
+ |*		Methode			*|
+ \*-------------------------------------*/
+
+void Histogramme::run()
+    {
+    Device::lastCudaError("histogramme (before)"); // temp debug
+    histogramme<<<dg,db, sizeOctetResult>>>(ptrTabIn, nbPixels, ptrTabOut); // assynchrone
+    Device::lastCudaError("histogramme (after)"); // temp debug
+
+    Device::synchronize(); // Temp,debug, only for printf in  GPU
+
+    // MM (Device -> Host)
+	{
+	Device::memcpyDToH(ptrResult, ptrDevResult, sizeOctetGM); // barriere synchronisation implicite
+	}
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

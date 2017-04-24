@@ -5253,3 +5253,13 @@ org.eclipse.core.runtime.CoreException: No property tester contributes a propert
 
 !ENTRY org.eclipse.debug.core 4 120 2017-04-18 16:10:46.150
 !MESSAGE Variable references empty selection: ${project_loc}
+!SESSION 2017-04-24 16:38:00.976 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-04-24 16:38:02.609
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

@@ -1,4 +1,4 @@
-16:29:35 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+16:22:07 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -130,6 +130,7 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : src/cpp/core/03_Slice/01_objet/host/
 [CBI] ->              : src/cpp/core/04_Montecarlo/host/
 [CBI] ->              : src/cpp/core/05_MontecarloMultiGPU/host/
+[CBI] ->              : src/cpp/core/07_Histogramme/01_objet/host/
 [CBI] ->              : src/cpp/test/junit/01_Test_Hello/
 [CBI] ->              : src/cpp/test/junit/02_Test_Vector/
 
@@ -271,11 +272,12 @@ Cuda compilation tools, release 8.0, V8.0.44
 
 [CBI] -> Compilation parallel (32 threads)
 
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/05_MontecarloMultiGPU/useMontecarloMultiGPU.cpp
-src/cpp/core/05_MontecarloMultiGPU/useMontecarloMultiGPU.cpp: In function ‘bool useMontecarloMultiGPU()’:
-src/cpp/core/05_MontecarloMultiGPU/useMontecarloMultiGPU.cpp:40:30: warning: integer overflow in expression [-Woverflow]
-     long nbDarts = INT_MAX * 5;
-                              ^
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/07_Histogramme/01_objet/device/histogramme_device.cu
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z11histogrammePijS_' for 'sm_52'
+ptxas info    : Function properties for _Z11histogrammePijS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 344 bytes cmem[0]
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc18/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
 
@@ -385,7 +387,7 @@ src/cpp/core/05_MontecarloMultiGPU/useMontecarloMultiGPU.cpp:40:30: warning: int
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 1 (s)
+[CBI] -> Time		  : 2 (s)
 ==================================================================================
 
 
@@ -397,5 +399,5 @@ src/cpp/core/05_MontecarloMultiGPU/useMontecarloMultiGPU.cpp:40:30: warning: int
 [CBI] -> Student_Cuda_cuda_80_x86_64 : End ALL!
 
 
-16:29:37 Build Finished (took 1s.489ms)
+16:22:09 Build Finished (took 2s.121ms)
 

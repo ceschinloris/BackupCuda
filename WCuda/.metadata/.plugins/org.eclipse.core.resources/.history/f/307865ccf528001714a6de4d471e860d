@@ -1,0 +1,83 @@
+#include <iostream>
+
+#include "Device.h"
+#include "Histogramme.h"
+
+using std::cout;
+using std::endl;
+
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern __global__ void histogramme(int* ptrTabPixelsGM, uint nbPixels, int* ptrHistogrammeGM);
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Constructeur			*|
+ \*-------------------------------------*/
+
+Histogramme::Histogramme(const Grid& grid, float* ptrResult, int dataMax)
+    {
+
+    DataCreator dataCreator(dataMax) ;
+    this->data = dataCreator.getTabData();
+    this->n= dataCreator.getLength();
+
+
+    this->ptrResult = ptrResult;
+
+
+    // Grid
+	{
+	this->dg = grid.dg;
+	this->db = grid.db;
+	}
+    }
+
+Histogramme::~Histogramme(void)
+    {
+
+    }
+
+/*--------------------------------------*\
+ |*		Methode			*|
+ \*-------------------------------------*/
+
+void Histogramme::run()
+    {
+    Device::lastCudaError("slice (before)"); // temp debug
+    slice<<<dg,db, sizeOctetSM>>>(ptrDevResult, nbSlice); // assynchrone
+    Device::lastCudaError("slice (after)"); // temp debug
+
+    Device::synchronize(); // Temp,debug, only for printf in  GPU
+
+    // MM (Device -> Host)
+	{
+	Device::memcpyDToH(ptrResult, ptrDevResult, sizeOctetGM); // barriere synchronisation implicite
+	}
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

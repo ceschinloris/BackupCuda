@@ -18,6 +18,7 @@ extern bool useAddVecteur(void);
 extern bool useSlice(void);
 extern bool useMontecarlo(void);
 extern bool useMontecarloMultiGPU(void);
+extern bool useHistogramme(void);
 
 /*--------------------------------------*\
  |*		Public			*|
@@ -48,7 +49,8 @@ int mainCore()
     //isOk &= useSlice();
 
     //isOk &= useMontecarlo();
-    isOk &= useMontecarloMultiGPU();
+    //isOk &= useMontecarloMultiGPU();
+    isOk &= useHistogramme();
 
     cout << "\nisOK = " << isOk << endl;
     cout << "\nEnd : mainCore" << endl;

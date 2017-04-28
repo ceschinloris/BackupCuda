@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_kkUm8Cj6Eeer38xJ6lHOcg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_kkUm8Sj6Eeer38xJ6lHOcg" bindingContexts="_kkV3sij6Eeer38xJ6lHOcg">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;mainCore.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/mainCore.cpp&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/mainCore.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;histogramme_device.cu&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/device/histogramme_device.cu&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/device/histogramme_device.cu&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;useHistogramme.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/useHistogramme.cpp&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/useHistogramme.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Histogramme.cu&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/Histogramme.cu&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/Histogramme.cu&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Montecarlo.cu&quot; tooltip=&quot;Student_Cuda/src/cpp/core/04_Montecarlo/host/Montecarlo.cu&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/04_Montecarlo/host/Montecarlo.cu&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;montecarlo.cu&quot; tooltip=&quot;Student_Cuda/src/cpp/core/04_Montecarlo/device/montecarlo.cu&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/04_Montecarlo/device/montecarlo.cu&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;MontecarloMultiGPU.cu&quot; tooltip=&quot;Student_Cuda/src/cpp/core/05_MontecarloMultiGPU/host/MontecarloMultiGPU.cu&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/05_MontecarloMultiGPU/host/MontecarloMultiGPU.cu&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;DataCreator.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/DataCreator.cpp&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/DataCreator.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;DataCreator.h&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/DataCreator.h&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/DataCreator.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;reductionADD.h&quot; tooltip=&quot;Student_Cuda/INC_SYMLINK/EXT/reductionADD.h&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/INC_SYMLINK/EXT/reductionADD.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;TabTools.h&quot; tooltip=&quot;Student_Cuda/INC_SYMLINK/EXT/TabTools.h&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/INC_SYMLINK/EXT/TabTools.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Tab.h&quot; tooltip=&quot;Student_Cuda/INC_SYMLINK/EXT/Tab.h&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/INC_SYMLINK/EXT/Tab.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;OmpTools.h&quot; tooltip=&quot;Student_Cuda/INC_SYMLINK/EXT/OmpTools.h&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/INC_SYMLINK/EXT/OmpTools.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;MathTools.h&quot; tooltip=&quot;Student_Cuda/INC_SYMLINK/EXT/MathTools.h&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/INC_SYMLINK/EXT/MathTools.h&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;HostMemory.h&quot; tooltip=&quot;Student_Cuda/INC_SYMLINK/EXT/HostMemory.h&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/INC_SYMLINK/EXT/HostMemory.h&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;mainCore.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/mainCore.cpp&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/mainCore.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;useHistogramme.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/useHistogramme.cpp&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/useHistogramme.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;useMontecarloMultiGPU.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/05_MontecarloMultiGPU/useMontecarloMultiGPU.cpp&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/05_MontecarloMultiGPU/useMontecarloMultiGPU.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;useMontecarlo.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/04_Montecarlo/useMontecarlo.cpp&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/04_Montecarlo/useMontecarlo.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;useSlice.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/03_Slice/01_objet/useSlice.cpp&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/03_Slice/01_objet/useSlice.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/main.cpp&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/main.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.cpp&quot; tooltip=&quot;Student_Cuda_Image/src/cpp/main.cpp&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda_Image/src/cpp/main.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;RayTracingDevice.cu&quot; tooltip=&quot;Student_Cuda_Image/src/cpp/core/03_RayTracing/moo/device/RayTracingDevice.cu&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda_Image/src/cpp/core/03_RayTracing/moo/device/RayTracingDevice.cu&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;histogramme_device.cu&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/device/histogramme_device.cu&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/device/histogramme_device.cu&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Histogramme.cu&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/Histogramme.cu&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/Histogramme.cu&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Montecarlo.cu&quot; tooltip=&quot;Student_Cuda/src/cpp/core/04_Montecarlo/host/Montecarlo.cu&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/04_Montecarlo/host/Montecarlo.cu&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;montecarlo.cu&quot; tooltip=&quot;Student_Cuda/src/cpp/core/04_Montecarlo/device/montecarlo.cu&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/04_Montecarlo/device/montecarlo.cu&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;MontecarloMultiGPU.cu&quot; tooltip=&quot;Student_Cuda/src/cpp/core/05_MontecarloMultiGPU/host/MontecarloMultiGPU.cu&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/05_MontecarloMultiGPU/host/MontecarloMultiGPU.cu&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;DataCreator.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/DataCreator.cpp&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/DataCreator.cpp&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;DataCreator.h&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/DataCreator.h&quot;>&#xA;&lt;persistable path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/DataCreator.h&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_kkUm8Sj6Eeer38xJ6lHOcg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_kkUm8ij6Eeer38xJ6lHOcg" x="105" y="42" width="1419" height="821">
@@ -155,10 +155,9 @@
           <tags>persp.actionSet:org.eclipse.rse.core.search.searchActionSet</tags>
           <tags>persp.actionSet:org.eclipse.debug.ui.profileActionSet</tags>
           <tags>persp.actionSet:com.jprofiler.integrations.eclipse.attach</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_kkUnCij6Eeer38xJ6lHOcg" selectedElement="_kkUnCyj6Eeer38xJ6lHOcg" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_kkUnCij6Eeer38xJ6lHOcg" selectedElement="_kkUnECj6Eeer38xJ6lHOcg" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_kkUnCyj6Eeer38xJ6lHOcg" elementId="topLeft" containerData="1834" selectedElement="_kkUnDij6Eeer38xJ6lHOcg">
               <tags>newtablook</tags>
-              <tags>active</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_kkUnDCj6Eeer38xJ6lHOcg" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_kkVO-Sj6Eeer38xJ6lHOcg"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_kkUnDSj6Eeer38xJ6lHOcg" elementId="org.eclipse.cdt.ui.CView" toBeRendered="false" ref="_kkVQbCj6Eeer38xJ6lHOcg"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_kkUnDij6Eeer38xJ6lHOcg" elementId="org.eclipse.ui.views.ResourceNavigator" ref="_kkVPFSj6Eeer38xJ6lHOcg"/>
@@ -170,6 +169,7 @@
                 <children xsi:type="basic:PartStack" xmi:id="_kkUnEyj6Eeer38xJ6lHOcg" elementId="bottom" containerData="3200" selectedElement="_kkUnHij6Eeer38xJ6lHOcg">
                   <tags>newtablook</tags>
                   <tags>org.eclipse.e4.secondaryDataStack</tags>
+                  <tags>active</tags>
                   <tags>noFocus</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_kkUnFCj6Eeer38xJ6lHOcg" elementId="org.eclipse.ui.views.ProblemView" ref="_kkVQbSj6Eeer38xJ6lHOcg"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_kkUnFSj6Eeer38xJ6lHOcg" elementId="org.eclipse.ui.views.TaskList" ref="_kkVQDyj6Eeer38xJ6lHOcg"/>
@@ -350,116 +350,24 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_kkVOlCj6Eeer38xJ6lHOcg" elementId="org.eclipse.ui.editorss" selectedElement="_kkVOlSj6Eeer38xJ6lHOcg">
-      <children xsi:type="basic:PartStack" xmi:id="_kkVOlSj6Eeer38xJ6lHOcg" elementId="PartStack@1aebab12" selectedElement="_kkVOlij6Eeer38xJ6lHOcg">
-        <children xsi:type="basic:Part" xmi:id="_kkVOlij6Eeer38xJ6lHOcg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="useHistogramme.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;useHistogramme.cpp&quot; partName=&quot;useHistogramme.cpp&quot; title=&quot;useHistogramme.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/useHistogramme.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/useHistogramme.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1388&quot; selectionTopPixel=&quot;377&quot;/>&#xA;&lt;/editor>"/>
+      <children xsi:type="basic:PartStack" xmi:id="_kkVOlSj6Eeer38xJ6lHOcg" elementId="PartStack@1aebab12" selectedElement="_TZIuECv_EeeTyLy0U_ukZw">
+        <children xsi:type="basic:Part" xmi:id="_TZIuECv_EeeTyLy0U_ukZw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="mainCore.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;mainCore.cpp&quot; partName=&quot;mainCore.cpp&quot; title=&quot;mainCore.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/mainCore.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Student_Cuda/src/cpp/core/mainCore.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1290&quot; selectionTopPixel=&quot;646&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
           <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVOlyj6Eeer38xJ6lHOcg" elementId="#CEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVOmCj6Eeer38xJ6lHOcg" elementId="#CEditorRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorRulerContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVOmSj6Eeer38xJ6lHOcg" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_kkVOmij6Eeer38xJ6lHOcg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Histogramme.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Histogramme.h&quot; partName=&quot;Histogramme.h&quot; title=&quot;Histogramme.h&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/Histogramme.h&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/Histogramme.h&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1072&quot; selectionTopPixel=&quot;282&quot;/>&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_kM3J8Cv_EeeTyLy0U_ukZw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="useMontecarloMultiGPU.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;useMontecarloMultiGPU.cpp&quot; partName=&quot;useMontecarloMultiGPU.cpp&quot; title=&quot;useMontecarloMultiGPU.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/05_MontecarloMultiGPU/useMontecarloMultiGPU.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Student_Cuda/src/cpp/core/05_MontecarloMultiGPU/useMontecarloMultiGPU.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1603&quot; selectionTopPixel=&quot;384&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
           <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVOmyj6Eeer38xJ6lHOcg" elementId="#CEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVOnCj6Eeer38xJ6lHOcg" elementId="#CEditorRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorRulerContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVOnSj6Eeer38xJ6lHOcg" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_kkVOnij6Eeer38xJ6lHOcg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Histogramme.cu" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Histogramme.cu&quot; partName=&quot;Histogramme.cu&quot; title=&quot;Histogramme.cu&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/Histogramme.cu&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host/Histogramme.cu&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;94&quot; selectionTopPixel=&quot;317&quot;/>&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_Ue4_wCwAEeeTyLy0U_ukZw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="useHistogramme.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;useHistogramme.cpp&quot; partName=&quot;useHistogramme.cpp&quot; title=&quot;useHistogramme.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/useHistogramme.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/useHistogramme.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1473&quot; selectionTopPixel=&quot;799&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
           <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVOnyj6Eeer38xJ6lHOcg" elementId="#CEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVO7yj6Eeer38xJ6lHOcg" elementId="#CEditorRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorRulerContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVO8Cj6Eeer38xJ6lHOcg" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_kkVO8Sj6Eeer38xJ6lHOcg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="histogramme_device.cu" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;histogramme_device.cu&quot; partName=&quot;histogramme_device.cu&quot; title=&quot;histogramme_device.cu&quot; tooltip=&quot;Student_Cuda/src/cpp/core/07_Histogramme/01_objet/device/histogramme_device.cu&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/device/histogramme_device.cu&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2143&quot; selectionTopPixel=&quot;1127&quot;/>&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-          <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVO8ij6Eeer38xJ6lHOcg" elementId="#CEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVO8yj6Eeer38xJ6lHOcg" elementId="#CEditorRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorRulerContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVO9Cj6Eeer38xJ6lHOcg" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_kkVO9Sj6Eeer38xJ6lHOcg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="mainCore.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;mainCore.cpp&quot; partName=&quot;mainCore.cpp&quot; title=&quot;mainCore.cpp&quot; tooltip=&quot;Student_Cuda/src/cpp/core/mainCore.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Student_Cuda/src/cpp/core/mainCore.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;880&quot; selectionTopPixel=&quot;668&quot;/>&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-          <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVO9ij6Eeer38xJ6lHOcg" elementId="#CEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVO9yj6Eeer38xJ6lHOcg" elementId="#CEditorRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorRulerContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_kkVO-Cj6Eeer38xJ6lHOcg" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
         </children>
       </children>
     </sharedElements>
@@ -574,11 +482,9 @@
       <tags>categoryTag:General</tags>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_kkVPFSj6Eeer38xJ6lHOcg" elementId="org.eclipse.ui.views.ResourceNavigator" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Navigator" iconURI="platform:/plugin/org.eclipse.ui.ide//icons/full/eview16/filenav_nav.gif" tooltip="" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view LINK_NAVIGATOR_TO_EDITOR=&quot;1&quot; sorter=&quot;1&quot;>&#xA;&lt;filters>&#xA;&lt;filter element=&quot;*.class&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;filter element=&quot;.*&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;/filters>&#xA;&lt;expanded>&#xA;&lt;element path=&quot;/Student_Cuda&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/04_Montecarlo&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/04_Montecarlo/device&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/04_Montecarlo/host&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/device&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/host&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda_Image&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda_Image/src&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda_Image/src/cpp&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda_Image/src/cpp/core&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda_Image/src/cpp/core/03_RayTracing&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda_Image/src/cpp/core/03_RayTracing/moo&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda_Image/src/cpp/core/03_RayTracing/moo/device&quot;/>&#xA;&lt;element path=&quot;/Student_OMP&quot;/>&#xA;&lt;element path=&quot;/Student_OMP/src&quot;/>&#xA;&lt;element path=&quot;/Student_OMP/src/cpp&quot;/>&#xA;&lt;element path=&quot;/Student_OMP/src/cpp/core&quot;/>&#xA;&lt;element path=&quot;/Student_OMP/src/cpp/core/omp&quot;/>&#xA;&lt;element path=&quot;/Student_OMP/src/cpp/core/omp/02_Slice&quot;/>&#xA;&lt;/expanded>&#xA;&lt;selection>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/useHistogramme.cpp&quot;/>&#xA;&lt;/selection>&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view LINK_NAVIGATOR_TO_EDITOR=&quot;1&quot; sorter=&quot;1&quot;>&#xA;&lt;filters>&#xA;&lt;filter element=&quot;*.class&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;filter element=&quot;.*&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;/filters>&#xA;&lt;expanded>&#xA;&lt;element path=&quot;/Student_Cuda&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/04_Montecarlo&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/05_MontecarloMultiGPU&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet&quot;/>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/07_Histogramme/01_objet/device&quot;/>&#xA;&lt;element path=&quot;/Student_OMP&quot;/>&#xA;&lt;element path=&quot;/Student_OMP/src&quot;/>&#xA;&lt;element path=&quot;/Student_OMP/src/cpp&quot;/>&#xA;&lt;element path=&quot;/Student_OMP/src/cpp/core&quot;/>&#xA;&lt;element path=&quot;/Student_OMP/src/cpp/core/omp&quot;/>&#xA;&lt;element path=&quot;/Student_OMP/src/cpp/core/omp/02_Slice&quot;/>&#xA;&lt;/expanded>&#xA;&lt;selection>&#xA;&lt;element path=&quot;/Student_Cuda/src/cpp/core/mainCore.cpp&quot;/>&#xA;&lt;/selection>&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_kkVPFij6Eeer38xJ6lHOcg" elementId="org.eclipse.ui.views.ResourceNavigator">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -1743,7 +1649,7 @@
       <tags>categoryTag:&amp;C/C++</tags>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_kkVQbSj6Eeer38xJ6lHOcg" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide//icons/full/eview16/problems_view.gif" tooltip="0 errors, 1 warning, 0 others" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.resourceField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;105&quot; org.eclipse.ui.ide.markerType=&quot;105&quot; org.eclipse.ui.ide.pathField=&quot;140&quot; org.eclipse.ui.ide.resourceField=&quot;105&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;350&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xA;&lt;DESCENDING_FIELDS IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.resourceField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xA;&lt;expanded>&#xA;&lt;category IMemento.internal.id=&quot;Warnings (10 items)&quot;/>&#xA;&lt;/expanded>&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;105&quot; org.eclipse.ui.ide.markerType=&quot;105&quot; org.eclipse.ui.ide.pathField=&quot;140&quot; org.eclipse.ui.ide.resourceField=&quot;105&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;350&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xA;&lt;DESCENDING_FIELDS IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_kkVQbij6Eeer38xJ6lHOcg" elementId="org.eclipse.ui.views.ProblemView">
@@ -2033,9 +1939,11 @@
       <toolbar xmi:id="_kkVQtCj6Eeer38xJ6lHOcg" elementId="org.eclipse.tcf.te.ui.views.View" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_kkVQtSj6Eeer38xJ6lHOcg" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Terminal" iconURI="platform:/plugin/org.eclipse.tm.terminal.view.ui/icons/eview16/terminal_view.gif" tooltip="" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view>&#xA;&lt;terminalConnections id=&quot;org.eclipse.tm.terminal.view.ui.TerminalsView&quot;/>&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view>&#xA;&lt;terminalConnections id=&quot;org.eclipse.tm.terminal.view.ui.TerminalsView&quot;>&#xA;&lt;connection delegateId=&quot;org.eclipse.tm.terminal.connector.local.launcher.local&quot; encoding=&quot;UTF-8&quot; terminal.forceNew=&quot;true&quot; tm.terminal.connector.id=&quot;org.eclipse.tm.terminal.connector.local.LocalConnector&quot;/>&#xA;&lt;connection delegateId=&quot;org.eclipse.tm.terminal.connector.local.launcher.local&quot; encoding=&quot;UTF-8&quot; terminal.forceNew=&quot;true&quot; tm.terminal.connector.id=&quot;org.eclipse.tm.terminal.connector.local.LocalConnector&quot;/>&#xA;&lt;/terminalConnections>&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:Terminal</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_kkVQtij6Eeer38xJ6lHOcg" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -2081,7 +1989,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kkV1ESj6Eeer38xJ6lHOcg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_oISngCj7Eee5mdiJbRHwAA" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_kkXuDCj6Eeer38xJ6lHOcg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_H0t2YCwEEeeNHKZPJZN6xQ" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_kkXuDCj6Eeer38xJ6lHOcg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kkV1ISj6Eeer38xJ6lHOcg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2114,7 +2022,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kkV1dCj6Eeer38xJ6lHOcg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_oIVq0Cj7Eee5mdiJbRHwAA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_kkXs3ij6Eeer38xJ6lHOcg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_H0w5sCwEEeeNHKZPJZN6xQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_kkXs3ij6Eeer38xJ6lHOcg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kkV1fyj6Eeer38xJ6lHOcg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

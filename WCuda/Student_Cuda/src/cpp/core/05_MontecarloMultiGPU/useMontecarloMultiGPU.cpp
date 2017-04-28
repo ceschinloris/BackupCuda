@@ -53,10 +53,10 @@ bool useMontecarloMultiGPU()
     Chrono c = Chrono();
     montecarloMultiGPU.run();
     c.stop();
-    std::cout<<"Resultat = "<<result;
+    std::cout<<"Resultat MontecarloMultiGPU = "<<result;
     c.print();
 
-    bool isOk = MathTools::isEquals(result, PI, 1e-6);
+    bool isOk = MathTools::isEquals(result, PI, 1e-1);
 
 
     return isOk;

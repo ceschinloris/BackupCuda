@@ -1,4 +1,4 @@
-16:22:07 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+11:28:04 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -387,7 +387,7 @@ ptxas info    : Used 32 registers, 344 bytes cmem[0]
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 2 (s)
+[CBI] -> Time		  : 3 (s)
 ==================================================================================
 
 
@@ -399,5 +399,5 @@ ptxas info    : Used 32 registers, 344 bytes cmem[0]
 [CBI] -> Student_Cuda_cuda_80_x86_64 : End ALL!
 
 
-16:22:09 Build Finished (took 2s.121ms)
+11:28:08 Build Finished (took 3s.531ms)
 

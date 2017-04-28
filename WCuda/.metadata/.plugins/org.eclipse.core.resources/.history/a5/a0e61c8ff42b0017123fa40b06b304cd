@@ -86,7 +86,7 @@ __device__ void reductionInterBlock(int* TAB_SM, int* ptrHistogrammeGM)
 	    {
 	    for (int i = 0; i < 256; i++)
 		{
-		atomicAdd(&ptrHistogrammeGM[i], TAB_SM[i]);
+		    ptrHistogrammeGM[i] = TAB_SM[i];
 		}
 	    }
 

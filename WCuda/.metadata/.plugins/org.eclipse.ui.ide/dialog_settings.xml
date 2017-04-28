@@ -39,6 +39,10 @@
 		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
 		<item value="true" key="LINK_NAVIGATOR_TO_EDITOR"/>
 	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
 	<section name="NewWizardAction">
 		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
@@ -46,6 +50,10 @@
 			<item value="org.eclipse.cdt.ui.newCWizards"/>
 			<item value="org.eclipse.jdt.ui.java"/>
 		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="619" key="DIALOG_X_ORIGIN"/>
+		<item value="265" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.ui.internal.views.markers.FiltersConfigurationDialog">
 		<item value="selected_CBI" key="SELECTED_FILTER_GROUP"/>

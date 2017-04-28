@@ -52,8 +52,7 @@ bool useSlice()
 
     float n = mp * 64;
     float attendu = n*(n-1)/2; 	// N * (N - 1) / 2
-    printf("Resultat = %f\n", result);
-    printf("Attendu = %f\n", attendu);
+    printf("Resultat Slice = %f\n", result);
 
 
     bool isOk = MathTools::isEquals(result, PI, 1e-6);

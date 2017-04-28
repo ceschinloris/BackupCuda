@@ -1,4 +1,4 @@
-12:41:26 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Image ****
+12:21:27 **** Build of configuration CudaGCC for project Student_Cuda_Image ****
 cbicc cuda all 
 
 --------------------------------------------------------
@@ -565,7 +565,7 @@ ptxas info    : 235 bytes gmem
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 29 (s)
+[CBI] -> Time		  : 31 (s)
 ==================================================================================
 
 
@@ -577,5 +577,5 @@ ptxas info    : 235 bytes gmem
 [CBI] -> Student_Cuda_Image_cuda_80_x86_64   : End ALL!
 
 
-12:41:55 Build Finished (took 29s.634ms)
+12:21:58 Build Finished (took 31s.863ms)
 

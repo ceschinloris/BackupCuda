@@ -50,14 +50,20 @@ bool useHistogramme()
     Histogramme histogramme(grid, result, dataMax);
     histogramme.run();
 
+    printf("Resultats Histogramme : \n");
+
+
+    bool isOk = true;
+
     for (int i = 0; i < dataMax; i++ ) {
           printf("Element[%d] = %d\n", i, result[i] );
+          if (i != result[i] - 1)
+	      isOk = false;
        }
 
 
 
 
-    bool isOk = true;
 
 
     return isOk;

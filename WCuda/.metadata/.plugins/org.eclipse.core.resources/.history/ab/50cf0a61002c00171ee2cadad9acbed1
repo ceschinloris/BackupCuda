@@ -14,13 +14,13 @@ using std::endl;
  |*		Imported	 	*|
  \*-------------------------------------*/
 
-#include "host/Montecarlo.h"
+#include "Histogramme.h"
 
 /*--------------------------------------*\
  |*		Public			*|
  \*-------------------------------------*/
 
-bool useMontecarlo(void);
+bool useHistogramme(void);
 
 /*--------------------------------------*\
  |*		Private			*|
@@ -34,10 +34,11 @@ bool useMontecarlo(void);
  |*		Public			*|
  \*-------------------------------------*/
 
-bool useMontecarlo()
+bool useHistogramme()
     {
-    int nbDarts = INT_MAX;
-    float m = 20;
+    int dataMax = 255;
+
+    int result[dataMax];
 
     // Grid cuda
     int mp = Device::getMPCount();
@@ -46,14 +47,19 @@ bool useMontecarlo()
     dim3 db = dim3(64, 1, 1);   	// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
     Grid grid(dg, db);
 
-    Montecarlo montecarlo(grid, nbDarts, m);
-    montecarlo.run();
+    Histogramme histogramme(grid, result, dataMax);
+    histogramme.run();
 
-    double result = montecarlo.getResult();
-    printf("Resultat = %f\n", result);
+    printf("Resultats Histogramme");
+
+    for (int i = 0; i < dataMax; i++ ) {
+          printf("Element[%d] = %d\n", i, result[i] );
+       }
 
 
-    bool isOk = MathTools::isEquals(result, PI, 1e-1);
+
+
+    bool isOk = true;
 
 
     return isOk;
